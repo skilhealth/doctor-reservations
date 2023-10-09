@@ -1,0 +1,59 @@
+@import url(style.css);
+
+main {
+    padding: 17px 20px;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+}
+
+article {
+    background-color: var(--second-base);
+    border-radius: 20px;
+    padding: 18px 12px;
+    font-size: 12px;
+    margin-top: 12px;
+}
+
+figure {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+figure>img {
+    object-fit: cover;
+    max-width: 100px;
+    border-radius: 10px;
+}
+
+.profile-container {
+    margin-left: 8px;
+
+}
+
+.status {
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+}
+
+.status-color {
+    height: 1em;
+    background-color: #0FF033;
+    width: 1em;
+    border-radius: 20px;
+    margin-right: 4px;
+}
+
+.profile-container>h1 {
+    font-size: 18px;
+}
+
+.info-doctor {
+    margin-top: 15px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}

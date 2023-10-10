@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skillhealth</title>
+    <link rel="stylesheet" href="css/lpstyle.css">
+</head>
+<body>
+    <nav class="header">
+        <label class="expand">
+            <img src="assets/LogoSkillHealth.png" class="logo"></img>
+        </label>
+        
+        <!-- Elemen hamburger -->
+        <div class="hamburger">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        
+        <ul class="nav">
+            <li>Home</li>
+            <li>Cari Dokter</li>
+            <li>Forum</li>
+            <li>Login</li>
+            <li>Register</li>
+        </ul>
+        
+        <!-- Elemen tombol tutup -->
+        <div class="close-menu">×</div>
+    </nav>
+    
+    <script>
+        // Ambil elemen-elemen yang diperlukan
+        const hamburger = document.querySelector(".hamburger");
+        const closeMenu = document.querySelector(".close-menu");
+        const nav = document.querySelector(".nav");
+    
+        // Tambahkan event listener untuk mengaktifkan menu responsif saat tombol hamburger diklik
+        hamburger.addEventListener("click", function () {
+            nav.classList.add("active");
+        });
+    
+        // Tambahkan event listener untuk menonaktifkan menu responsif saat tombol tutup diklik
+        closeMenu.addEventListener("click", function () {
+            nav.classList.remove("active");
+        });
+    </script>
+</body>
+</html>

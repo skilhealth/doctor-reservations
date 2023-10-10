@@ -1,10 +1,23 @@
 @import url(style.css);
+body{
+    height: 100vh;
+    display: flex;
+}
 
 main {
     padding: 17px 20px;
-    width: 100vw;
     display: flex;
     flex-direction: column;
+    flex-grow: 1;
+}
+
+.main-wrap{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 12px;
+    height: 100%;
+    flex-grow: 1;
 }
 
 article {
@@ -12,7 +25,6 @@ article {
     border-radius: 20px;
     padding: 18px 12px;
     font-size: 12px;
-    margin-top: 12px;
 }
 
 figure {
@@ -57,3 +69,39 @@ figure>img {
     flex-direction: column;
     gap: 7px;
 }
+
+section {
+    display: flex;
+    flex-direction: column;
+    
+    background-color: #FFFFFF;
+    filter: drop-shadow(0px 0.19370795786380768px 2.2138051986694336px rgba(0, 0, 0, 0.02)) drop-shadow(0px 0.4655071496963501px 5.32008171081543px rgba(0, 0, 0, 0.03)) drop-shadow(0px 0.8765086531639099px 10.017241477966309px rgba(0, 0, 0, 0.04)) drop-shadow(0px 1.5635416507720947px 17.869047164916992px rgba(0, 0, 0, 0.04)) drop-shadow(0px 2.9244327545166016px 33.422088623046875px rgba(0, 0, 0, 0.05)) drop-shadow(0px 7px 80px rgba(0, 0, 0, 0.07));
+    border-radius: 15px;
+    padding: 12px;
+}
+
+#work{
+    background-color: #0FF033;
+    color: #FFFFFF;
+    display: inline-block;
+    border-radius: 6px;
+    padding: 4px 10px;
+    margin-bottom:6px;
+}
+
+section>hr{
+    margin-top:8px;
+}
+
+section>button{
+    padding: 8px 0;
+    border: none;
+    border-radius: 10px;
+    margin: 18px 0;
+    background-color: var(--brand-color);
+    color: var(--main-base);
+    font-weight: 600;
+}
+
+
+/* desktop view */

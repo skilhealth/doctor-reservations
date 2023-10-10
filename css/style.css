@@ -10,6 +10,7 @@
 .back-button{
     font-weight:700 ;
     font-size: 18px;
+    align-self: flex-start;
 }
 .back-button>a{
     margin-right: 20px;

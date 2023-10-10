@@ -1,0 +1,81 @@
+@import url('style.css');
+
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    padding: 17px 20px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+figure {
+    width: 100%;
+    margin-top: 12px;
+}
+
+figure>img {
+    object-fit: cover;
+    width: 100%;
+}
+
+section{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; 
+}
+.info-code,.status-checkin{
+    flex: 1;
+    min-width: 180px;
+    margin: 5px 0;
+}
+
+.card {
+    display: flex;
+    background-color:var(--main-base);
+    filter: drop-shadow(0px 0.19370795786380768px 2.2138051986694336px rgba(0, 0, 0, 0.02)) drop-shadow(0px 0.4655071496963501px 5.32008171081543px rgba(0, 0, 0, 0.03)) drop-shadow(0px 0.8765086531639099px 10.017241477966309px rgba(0, 0, 0, 0.04)) drop-shadow(0px 1.5635416507720947px 17.869047164916992px rgba(0, 0, 0, 0.04)) drop-shadow(0px 2.9244327545166016px 33.422088623046875px rgba(0, 0, 0, 0.05)) drop-shadow(0px 7px 80px rgba(0, 0, 0, 0.07));
+    border-radius: 10px;
+    padding: 12px;
+    margin-bottom: 10px;
+}
+
+.profile-container {
+    margin-left: 8px;
+
+}
+
+.status {
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+}
+
+.status-color {
+    height: 1em;
+    background-color: #0FF033;
+    width: 1em;
+    border-radius: 20px;
+    margin-right: 4px;
+}
+
+.profile-container>h1 {
+    font-size: 18px;
+}
+
+.doctor-img {
+    flex-shrink: 1;
+    display: flex;
+    align-items: center;
+}
+
+.doctor-img>img {
+    object-fit: cover;
+    max-width: 100px;
+    border-radius: 10px;
+}
+
+

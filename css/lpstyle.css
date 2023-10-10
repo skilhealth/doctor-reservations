@@ -1,44 +1,55 @@
 @import "style.css";
 
-body {
+main {
     font-family: "Poppins";
 }
 
 .nav li {
-    display: flex;
-    text-decoration: none;
+    display: inline-block;
+    line-height: 83px;
+    margin: 0 5px;
+    font-weight: bold;
     color: var(--main-base);
 }
 
-.hamburger .bar{
-    background-color: var(--main-base)
+.nav li a{
+    color: white;
+    font-size: 17px;
+    padding: 7px 13px;
+    border-radius: 3px;
+    text-transform: uppercase;
+}
+
+a.active,a:hover{
+    background: #1b9bff;
+    transition: .5s;
+}
+
+.nav li:hover{
+    cursor: pointer;
+    transition: 0.3s;
 }
 
 .nav {
-    display: flex;
-    gap: 50px;
+    float: right;
+    margin-right: 20px;
     
 }
 
 .header {
+    height: 83px;
     background: var(--brand-color);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 25px;
 }
 
 .logo {
     width: 39px;
     height: 42px;
+    margin: 20px 20px;
 }
 
 .nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    gap: 25px;
+    float: right;
+    margin-right: 20px;
      
 }
 
@@ -46,67 +57,62 @@ body {
     margin-left: auto;
 }
 
-.hamburger {
-    display: none; /* Sembunyikan tombol hamburger pada layar besar */
+.check-btn{
+    font-size: 30px;
+    color: white;
+    float: right;
+    line-height: 80px;
+    margin-right: 20px;
     cursor: pointer;
-}
+    display: none;
+  }
 
-.bar {
-    width: 30px;
-    height: 3px;
-    background-color: #333;
-    margin: 6px 0;
-}
+  #check{
+    display: none;
+  }
 
-/* Gaya tombol tutup */
-.close-menu {
-    display: none; /* Sembunyikan tombol tutup pada awalnya */
-    cursor: pointer;
-}
-
-/* Gaya menu responsif */
-.nav.active {
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    top: 50px; /* Sesuaikan dengan tinggi header Anda */
-    left: 0;
-    right: 0;
-    background: #fff; /* Warna latar belakang menu */
-    z-index: 1000; /* Pastikan menu berada di atas elemen lain */
-}
-
-.nav.active li {
-    margin: 10px 0; /* Jarak antar item menu */
-    text-align: center; /* Pusatkan teks */
-}
-
-@media (max-width: 768px) {
-    .nav {
-        flex-direction: column; 
-        text-align: center; 
-        position: absolute;
-        top: 83px; 
-        left: 0;
-        right: 0;
-        background: var(--brand-color);
-        display: none; 
+  @media (max-width: 952px){
+    logo{
+      
+      padding-left: 50px;
     }
-
-    .nav.active {
-        display: flex; 
+    .nav li a{
+      font-size: 16px;
     }
-
-    .nav li {
-        margin-bottom: 15px; /
+  }
+  @media (max-width: 858px){
+    .check-btn{
+      display: block;
     }
-    
-    
-    .hamburger {
-        display: block; 
+    .nav{
+      position: fixed;
+      width: 100%;
+      height: 100vh;
+      background: var(--brand-color);
+      top: 80px;
+      left: -100%;
+      text-align: center;
+      transition: all .5s;
     }
-    
-    .close-menu {
-        display: none;
+    .nav li{
+      display: block;
+      margin: 50px 0;
+      line-height: 30px;
+     
     }
-}
+    .nav li a{
+      font-size: 20px;
+    }
+    a:hover,a.active{
+      background: none;
+      color: #0082e6;
+    }
+    #check:checked ~ .nav{
+      left: 0;
+    }
+  }
+  section{
+    background: url(bg1.jpg) no-repeat;
+    background-size: cover;
+    height: calc(100vh - 20px);
+  }

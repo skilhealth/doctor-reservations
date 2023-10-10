@@ -1,7 +1,3 @@
-let doctorInfo = document.getElementById("doctor-info")
-let doctorSKD = document.getElementById("skd")
-let doctorExp = document.getElementById("experience")
-let doctorEdu = document.getElementById("education")
 let cardStatus = document.querySelector("section")
 
 let profile = document.getElementById("profile")

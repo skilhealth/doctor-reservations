@@ -93,6 +93,7 @@ section>hr{
 }
 section>a{
     width: 100%;
+    margin-top: 12px;
 }
 
 .btn-in{
@@ -100,7 +101,6 @@ section>a{
     padding: 8px 0;
     border: none;
     border-radius: 10px;
-    margin: 18px 0;
     background-color: var(--brand-color);
     color: var(--main-base);
     font-weight: 600;

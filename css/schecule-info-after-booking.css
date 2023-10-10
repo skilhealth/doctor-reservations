@@ -52,7 +52,6 @@ figure>img {
 
 .status-color {
     height: 1em;
-    background-color: #0FF033;
     width: 1em;
     border-radius: 20px;
     margin-right: 4px;
@@ -80,7 +79,7 @@ section {
     padding: 12px;
 }
 
-#work{
+.work{
     background-color: #0FF033;
     color: #FFFFFF;
     display: inline-block;
@@ -92,8 +91,12 @@ section {
 section>hr{
     margin-top:8px;
 }
+section>a{
+    width: 100%;
+}
 
-section>button{
+.btn-in{
+    cursor: pointer;
     padding: 8px 0;
     border: none;
     border-radius: 10px;
@@ -101,6 +104,7 @@ section>button{
     background-color: var(--brand-color);
     color: var(--main-base);
     font-weight: 600;
+    width: 100%;
 }
 
 

@@ -1,7 +1,11 @@
 @import "style.css";
 
-main {
+body {
     font-family: "Poppins";
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 
@@ -23,7 +27,7 @@ main {
     text-decoration: none;
 }
 
-.nav li a.active,a:hover{
+.nav li a.active, .nav li a:hover{
     transition: .1s;
     border-top: solid 2px;
     border-bottom: solid 2px;
@@ -118,9 +122,31 @@ main {
     align-items: center;
   }
 
+  .footer-nav{
+    display: flex;
+    flex-direction: column;
+    padding-top: 15px;
+    list-style: none;
+    gap: 15px;
+  }
+
+  .footer h2{
+    font-size: 14px;
+    height: auto;
+    padding: 30px 0px;
+    color: var(--main-base);
+    font-weight: bold;
+    
+  }
+
+  .socmed{
+    display: flex;
+    list-style: none;
+  }
+
   article button{
     background: var(--main-base);
-    color: white;
+    color: var(--main-base);
     border: none;
     padding: 10px 20px;
     border-radius: 15px;
@@ -130,33 +156,82 @@ main {
 
     .find-doctor a {
         display: flex;
-        align-items: center;
         justify-content: center;
         text-decoration: none;
         color: var(--brand-color);
-    }
-
-    .find-doctor a {
-        align-items: center;    
+        
     }
 
     footer{
         display: flex;
         justify-content: space-between;
         background: var(--danger);
-        margin-top: 200px;
+        margin-top: 100px;
+        padding-right: 15px;
     }
 
     .footer{
         list-style: none;
         padding-top: 15px 0px;
         margin-right: 15px;
+        height: 260px;
     }
 
     .footer li a{
         text-decoration: none;
         color:white;
+        
     }
+
+    .footer .footer-nav a:hover{
+        border-top: var(--main-base) solid 2px;
+        border-bottom: var(--main-base) solid 2px;
+        
+    }
+
+    .social-icon {
+        display: flex;
+        flex-direction: row;
+        list-style: none;
+        align-items: center;
+        margin-top: 10px; 
+        margin-bottom: 0; 
+        padding: 0; 
+        position: relative;
+        bottom: 50px; 
+        right: 10px;
+    }
+
+    .social-icon li {
+        margin: 0 5px; /* Atur jarak antara ikon sosial */
+    }
+
+    .social-icon li svg{
+        width: 40px;
+        display: flex;
+        margin: 0px;
+        margin-top: 10px;
+        padding: 0px;
+        text-decoration: none;
+        height: auto;
+    }
+
+    .skilhealth{
+        display: flex;
+        justify-content: left;
+        align-items: center;
+      }
+
+    .skilhealth img{
+        width: 95px;
+        height: 100px;
+    }
+
+    .skilhealth h1{
+        color: var(--main-base);
+    }
+
+   
 
   @media (max-width: 952px){
 
@@ -175,8 +250,9 @@ main {
 
       .nav{
         position: absolute;
+        z-index: 999;
         width: 100%;
-        height: 300vh;
+        height: auto;
         background: var(--brand-color);
         top: 83px;
         left: -200%;
@@ -234,6 +310,35 @@ main {
         .expand h1{
           display: none;
         }
+
+        .skilhealth h1{
+            display: none;
+          }
+
+        .skilhealth img{
+            width: 40px;
+            height: 40px;
+        }
+
+        .footer li{
+            font-size: 8px;
+        }
+
+        .footer p{
+            font-size: 8px;
+        }
+
+        .footer-nav{
+            gap: 5px;
+        }
+
+        footer{
+            margin-top: 150px;
+        }
+
+        .social-icon li svg{
+            width: 32px;
+        }
   }
 
 
@@ -259,23 +364,46 @@ main {
     }
 
     .banner article{
+        padding-left: 10px;
         font-size: 8px;
     }
 
-    article button{
-        margin-top: 15px;
+    .banner article button{
         height: 20px;
         width: 100px;
+        margin-top: 10px;
+        padding-bottom: 20px;
       }
     
-    article button a{
+    .banner article button a{
         font-size: 8px;
-        align-items: center;
-        text-align: center;
-        margin-bottom: 8px;
-        
-        
+       
+    }  
+    footer{
+        margin-top: 30px;
+        height: auto;
+    }   
+
+    .footer p{
+        margin-bottom: 40px;
     }
+    .skilhealth{
+        margin-bottom: 200px;
+    }
+    
+    .social-icon{
+        
+        bottom: 100px;
+    }
+
+    .social-icon li svg{
+        margin-top: 65px;
+    }
+
+    .footer h2{
+        font-size: 8px;
+      }
+
   }
   section{
     background: url(bg1.jpg) no-repeat;

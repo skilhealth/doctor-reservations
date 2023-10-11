@@ -21,8 +21,6 @@ main {
     text-decoration: none;
 }
 
-.expand
-
 .nav li a.active,a:hover{
     transition: .1s;
     border-top: solid 2px;
@@ -63,6 +61,16 @@ main {
 .nav ul {
     margin-left: auto;
 }
+
+.expand{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+  }
+
+  .expand h1{
+    color:var(--main-base);
+  }
 
 .check-btn{
     font-size: 30px;
@@ -117,13 +125,19 @@ main {
     padding: 10px 20px;
     border-radius: 15px;
     width: 85;
-    height: 36
+    height: 36;
 }
 
-    article button a{
+    .find-doctor a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
         text-decoration: none;
-        color: var(--brand-color)
+        color: var(--brand-color);
+    }
 
+    .find-doctor a {
+        align-items: center;    
     }
 
     footer{
@@ -210,6 +224,7 @@ main {
         .doctor{
           width: 100px;
           height: 150px;
+          border-radius: 15px;
         }
   
         article button{
@@ -223,18 +238,39 @@ main {
 
 
   @media (max-width: 481px){
+    .header{
+        height: 50px;
+    }
+
+    .nav{
+        padding: 10px;
+        top: 50px
+    }
+
+    .doctor{
+        height: 100px;
+    }
+
+    .banner{
+        height: 100px;
+    }
+
     .banner article{
-        font-size: 10px;
+        font-size: 8px;
     }
 
     article button{
-        margin-top: 25px;
-        height: 30px;
+        margin-top: 15px;
+        height: 20px;
+        width: 100px;
       }
     
     article button a{
         font-size: 8px;
-        padding-bottom: 10px;
+        align-items: center;
+        text-align: center;
+        margin-bottom: 8px;
+        
         
     }
   }

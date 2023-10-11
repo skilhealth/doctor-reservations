@@ -1,10 +1,18 @@
-let tokenCode = "GJ652H"
+// inget untuk selalu ganti tokennya atau nanti lewat cookie
+let tokenCode = "CD456E" 
 let card = document.getElementsByClassName("card")
 let figure = document.getElementsByTagName("figure")
 let section = document.getElementsByTagName("section")
 
 function formatNumber(num) {
     return num.toString().padStart(2, '0');
+}
+function QueueName(data){
+    if(data == "Ahli Bedah Umum"){
+        return "BU"
+    }else if(data == "Ahli Jantung"){
+        return "JT"
+    }
 }
 async function getCheckInCode(index, day) {
     try {
@@ -52,7 +60,7 @@ async function getCheckInCode(index, day) {
             </div>
             <div class="info-code">
                 <p>Nomor Antrian</p>
-                <h1>JT${formatNumber(queueNumber)}</h1>
+                <h1>${QueueName(doctor.specialist)+formatNumber(queueNumber)}</h1>
             </div>
             <div class="status-checkin">
                 <p>Sisa Antrian Didepan</p>
@@ -73,4 +81,4 @@ async function getCheckInCode(index, day) {
 
 }
 
-getCheckInCode(0, 0)
+getCheckInCode(1, 0)

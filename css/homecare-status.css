@@ -1,0 +1,36 @@
+@import url(style.css);
+
+body{
+    height: 100vh;
+    display: flex;
+}
+
+main {
+    padding: 17px 20px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.card{
+    font-weight: 500;
+    background-color: var(--second-base);
+    border-radius: 10px;
+    padding: 17px 20px;
+    margin-top: 10px;
+
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.card>img {
+    object-fit: cover;
+    max-width: 100px;
+    border-radius: 10px;
+}
+
+.profile-container {
+    margin-left: 8px;
+
+}

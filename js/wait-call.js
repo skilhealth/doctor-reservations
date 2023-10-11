@@ -3,9 +3,7 @@ async function getCalldata(index,day){
     try{
         let result = await fetch(`https://6525187f67cfb1e59ce69680.mockapi.io/doctor/${index}`)
         let doctor = await result.json()
-        console.log(doctor)
         const date = doctor.schedule[day].day + ", " + doctor.schedule[day].date;
-        console.log(date)
         let cardData = `
             <p>${date}</p>
             <hr>

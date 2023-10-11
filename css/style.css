@@ -24,3 +24,87 @@
     --not-available: #D0D0D0;
     --danger: #740A0A;
 }
+
+/* =============navbar================ */
+.nav li {
+    display: flex;
+    margin: 0 25px;
+    font-weight: bold;
+    color: var(--main-base);
+    align-items: center;
+    
+}
+
+.nav li a{
+    color: white;
+    font-size: 17px;
+    padding: 7px 13px;
+    border-radius: 3px;
+    text-decoration: none;
+}
+
+.nav li a.active, .nav li a:hover{
+    transition: .1s;
+    border-top: solid 2px;
+    border-bottom: solid 2px;
+}
+
+.nav li:hover{
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.nav {
+    margin-right: 20px;
+    display: flex;
+    justify-content: right;
+}
+
+.header {
+    height: 83px;
+    background: var(--brand-color);
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo {
+    width: 39px;
+    height: 42px;
+    margin: 20px 20px;
+    color: var(--main-base)
+}
+
+.nav ul {
+    float: right;
+    margin-right: 20px;
+     
+}
+
+.nav ul {
+    margin-left: auto;
+}
+
+.expand{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+  }
+
+  .expand h1{
+    color:var(--main-base);
+  }
+
+.check-btn{
+    font-size: 30px;
+    color: white;
+    float: right;
+    line-height: 83px;
+    margin-right: 20px;
+    cursor: pointer;
+    display: none;
+  }
+
+  #check{
+    display: none;
+  }
+  /* ================== end navbar ================= */

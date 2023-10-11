@@ -24,9 +24,15 @@ main {
     align-items: center;
     padding: 10px;
 }
+.btn-wrap>a{
+    width: 100%;
+
+}
 button{
     background-color: var(--brand-color);
     color: var(--main-base);
+    cursor: pointer;
+
     padding: 10px;
     width: 100%;
     border-radius: 10px;

@@ -66,4 +66,4 @@ async function getDataDoctor(index, day) {
     }
 
 }
-getDataDoctor(0, 2)
+getDataDoctor(9, 1)

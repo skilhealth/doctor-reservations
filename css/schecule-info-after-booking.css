@@ -2,6 +2,7 @@
 body{
     height: 100vh;
     display: flex;
+    flex-direction: column;
 }
 
 main {
@@ -80,8 +81,6 @@ section {
 }
 
 .work{
-    background-color: #0FF033;
-    color: #FFFFFF;
     display: inline-block;
     border-radius: 6px;
     padding: 4px 10px;

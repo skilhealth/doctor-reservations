@@ -4,6 +4,8 @@ main {
     font-family: "Poppins";
 }
 
+
+/* =============navbar================ */
 .nav li {
     display: flex;
     margin: 0 25px;
@@ -86,6 +88,8 @@ main {
     display: none;
   }
 
+  /* ================== end navbar ================= */
+
   .banner{
     display:flex;
     justify-content: space-between;
@@ -112,10 +116,6 @@ main {
     display: flex;
     justify-content: left;
     align-items: center;
-  }
-
-  .expand h1{
-    color:var(--main-base);
   }
 
   article button{
@@ -159,10 +159,8 @@ main {
     }
 
   @media (max-width: 952px){
-    logo{
-      padding-left: 50px;
-    }
 
+    /*------------------- navbar------------- */
     .header{
         display: flex;
         flex-direction: row-reverse;
@@ -203,7 +201,9 @@ main {
       #check:checked ~ .nav{
         left: 0;
       }
-  
+      /*-------------------end navbar------------- */
+
+
       .banner{
           display:flex;
           justify-content: space-between;
@@ -238,6 +238,7 @@ main {
 
 
   @media (max-width: 481px){
+    /* =============navbar================= */
     .header{
         height: 50px;
     }
@@ -246,6 +247,8 @@ main {
         padding: 10px;
         top: 50px
     }
+
+    /*-------------------enf  navbar------------- */
 
     .doctor{
         height: 100px;

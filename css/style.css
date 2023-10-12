@@ -7,12 +7,14 @@
     margin: 0;
     box-sizing: border-box;
 }
-.back-button{
-    font-weight:700 ;
+
+.back-button {
+    font-weight: 700;
     font-size: 18px;
     align-self: flex-start;
 }
-.back-button>a{
+
+.back-button>a {
     margin-right: 20px;
 }
 
@@ -22,4 +24,147 @@
     --main-base: #FFFFFF;
     --second-base: #F1F5F8;
     --not-available: #D0D0D0;
+}
+
+/* ------------------ Nav Bar ------------------ */
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    background: var(--brand-color);
+    padding: 10px 20px;
+}
+
+.expand img {
+
+    height: 40px;
+}
+
+.expand h1 {
+    display: none;
+    font-size: 16px;
+    font-weight: bold;
+    color: var(--main-base);
+}
+
+#check {
+    display: none;
+}
+
+.check-btn {
+    color: var(--main-base);
+    width: auto;
+    font-size: 30px;
+}
+
+.nav-content {
+    list-style: none;
+    position: absolute;
+    z-index: 999;
+    width: 100%;
+    height: auto;
+    background: var(--brand-color);
+    left: 0;
+    text-align: center;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    top: 66.4px;
+    border-top: solid var(--main-base) 2px;
+}
+
+.nav-content li {
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+}
+
+.nav-content li:hover {
+    transition: 0.3s;
+    opacity: 0.6;
+}
+
+.nav-content li a {
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    color: var(--main-base);
+}
+
+@keyframes slide {
+    0% {
+        margin-top: 20px;
+    }
+
+    100% {
+        margin-top: 0px;
+    }
+}
+
+#check:checked~.nav-content {
+    display: flex;
+    animation: slide 0.3s ease-in;
+}
+
+
+
+@media(min-width: 670px) {
+    .check-btn {
+        display: none
+    }
+
+    .nav-content {
+        list-style: none;
+        position: relative;
+        z-index: 999;
+        width: 100%;
+        height: auto;
+        background: var(--brand-color);
+        left: 0%;
+        text-align: center;
+        transition: 0s;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        top: 0px;
+        border-top: none;
+    }
+
+    .expand {
+        display: flex;
+        align-items: center;
+    }
+
+    .expand h1 {
+        padding: 0px 10px;
+        display: flex;
+        font-size: 20px
+    }
+
+    .header {
+        display: flex;
+        flex-direction: row;
+
+    }
+
+    .nav-content {
+        gap: 25px;
+    }
+
+    .nav-content li a {
+        font-size: 20px
+    }
+
+    /* -------------------End Nav Bar----------------------- */
+
+    .back-button {
+        display: none;
+    }
+
 }

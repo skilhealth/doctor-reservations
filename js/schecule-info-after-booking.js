@@ -1,4 +1,4 @@
-let cardStatus = document.querySelector("section")
+let cardStatus = document.getElementById("card")
 let profile = document.getElementById("profile")
 let infoDoctor = document.getElementsByClassName("info-doctor")
 

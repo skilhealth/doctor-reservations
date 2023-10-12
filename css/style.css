@@ -75,6 +75,7 @@ body{
     align-items: center;
     top: 66.4px;
     border-top: solid var(--main-base) 2px;
+    transition: top 0.3s ease;
 }
     .nav-content li{
         display: flex;
@@ -95,13 +96,13 @@ body{
       }
       
       @keyframes slide {
-        0% { margin-top: 20px; }
-        100% { margin-top: 0px; }
+        0% { top: -100%; }
+        100% { top: 66.4px; }
     }
 
       #check:checked ~ .nav-content{
         display: flex;
-        animation: slide 0.3s ease-in;
+        animation: slide 0.3s ease;
       }
 
 

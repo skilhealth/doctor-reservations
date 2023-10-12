@@ -1,0 +1,114 @@
+@import "style.css";
+
+main {
+    margin-top: 20px;
+}
+.back-button {
+    margin-top: 30px;
+    font-weight: 700px;
+    margin-left: 20px;
+    align-self: flex-start;
+}
+.login-title {
+    align-items: center;
+    margin-left: 100px;
+}
+.login-title h3 {
+    text-align: center;
+    font-weight: bold;
+    margin-right: 95px;
+    font-family: 'Open Sans', sans-serif;
+
+}
+.login-title h2 {
+    margin-left: 50px;
+    font-weight: bold;
+    font-family: 'Open Sans', sans-serif;
+}
+.login-logo img {
+    display: flex;
+    position: relative;
+    width: 165px;
+    height: 165px;
+    margin-left: 126px;
+    align-items: center;
+    bottom: -30px;
+}
+.form-container h3{
+   padding: 10px;
+}
+
+.form-container input {
+    height: 50px;
+    border-radius: 10px;
+    padding: 20px;
+}
+.form-container form{
+    margin-top: 100px;
+    border-radius: 30px;
+    padding:20px 20px;
+    background-color: #FFFF;
+    display: flex;
+    flex-direction: column;
+    bottom: 0px;
+}
+.form-container .main-button {
+    padding: 15px 15px;
+    font-weight: 500;
+    color: #fff;
+    background: var(--brand-color);
+    cursor: pointer;
+    border-radius: 0.5rem;
+    margin-top: 40px;
+}
+.remember-forgot {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 25px;
+    align-items: center;
+    margin-top: -110px;
+}
+
+.remember-forgot #remember {
+    margin-right: 5px;
+}
+.remember-forgot a {
+    margin-top: 2px;
+}
+
+.forgot-link {
+    text-decoration: none;
+    margin-right: 20px;
+    margin-left: auto;
+}
+
+@media screen and (min-width: 620px) {
+    .back-button {
+        display: none;
+    }
+
+    .login-title {
+        padding: 12px;
+        align-items: center;
+        margin: 30px;
+    }
+    .login-title h2 {
+        text-align: center;
+    }
+    .login-title h3 {
+        text-align: center;
+        margin-left: 140px;
+    }
+
+    .login-logo img {
+        width: 180px;
+        height: 180px;
+        text-align: center;
+        margin-bottom: -140px;
+        left: 415px;
+        bottom: 20px;
+    }
+
+}
+
+

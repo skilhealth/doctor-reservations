@@ -10,7 +10,6 @@ main {
     display: flex;
     flex-direction: column;
     flex-grow: 1;
-    align-items: center;
 }
 
 .card{
@@ -22,9 +21,14 @@ main {
     font-size: 12px;
 
     max-width: 800px;
-    min-width: 800px;
     width: 100%;
     display: flex;
+    align-items: center;
+}
+.main-wrap{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
     align-items: center;
 }
 
@@ -58,4 +62,19 @@ main {
 
 h3{
     font-size: 16px;
+}
+
+.main-wrap > h2{
+    display: none;
+    
+
+}
+
+@media(min-width: 670px) {
+    .main-wrap > h2{
+        display: flex;
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+
 }

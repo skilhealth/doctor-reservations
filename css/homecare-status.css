@@ -8,17 +8,24 @@ body{
 main {
     padding: 17px 20px;
     display: flex;
-    flex-direction: column;
     flex-grow: 1;
+    justify-content: center;
+}
+.main-wrap{
+    display: flex;
+    align-items: center;
+    flex-shrink: 1;
+    flex-direction: column;
+    width: 800px;
 }
 
 .card{
+    height: min-content;
     font-weight: 500;
     background-color: var(--second-base);
     border-radius: 10px;
-    padding: 17px 20px;
+    padding: 10px;
     margin-top: 10px;
-
     width: 100%;
     display: flex;
     align-items: center;

@@ -11,11 +11,19 @@ main {
     display: flex;
     flex-direction: column;
     flex-grow: 1;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+.main-wrap{
+    max-width: 800px;
+    /* border: solid black; */
 }
 
 figure {
     width: 100%;
     margin-top: 12px;
+    
 }
 
 figure>img {
@@ -23,7 +31,7 @@ figure>img {
     width: 100%;
 }
 
-section{
+#queue-data{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between; 
@@ -76,6 +84,24 @@ section{
     object-fit: cover;
     max-width: 100px;
     border-radius: 10px;
+}
+@media(min-width: 670px) {
+    .main-wrap{
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
+    .data-wrap{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 100%;
+        gap: 30px;
+    }
+    .queue-data{
+        flex-wrap: nowrap;
+
+    }
 }
 
 

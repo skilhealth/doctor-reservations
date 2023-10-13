@@ -1,8 +1,8 @@
 // inget untuk selalu ganti tokennya atau nanti lewat cookie
-let tokenCode = "CD456E" 
+let tokenCode = "GK666H" 
 let card = document.getElementsByClassName("card")
 let figure = document.getElementsByTagName("figure")
-let section = document.getElementsByTagName("section")
+let section = document.getElementById("queue-data")
 
 function formatNumber(num) {
     return num.toString().padStart(2, '0');
@@ -73,7 +73,7 @@ async function getCheckInCode(index, day) {
         `
         figure[0].innerHTML = '<img src="../assets/qr-code.png" alt="">'
         card[0].innerHTML = doctorCard
-        section[0].innerHTML = queue
+        section.innerHTML = queue
     }
     catch (err) {
         console.log(err)

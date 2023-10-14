@@ -29,3 +29,43 @@ main {
     text-align: center;
 }
 
+.form-container form{
+    margin-top: 1px;
+    border-radius: 30px;
+    padding:20px 20px;
+    background-color: #FFFF;
+    display: flex;
+    flex-direction: column;
+    bottom: 0px;
+}
+.form-container input {
+    height: 50px;
+    border-radius: 10px;
+    padding: 10px;
+}
+.form-container select {
+    height: 50px;
+    border-radius: 10px;
+    padding: 20px;
+}
+.form-container h3{
+    padding: 5px;
+ }
+ .form-container .regis-button {
+    padding: 10px 10px;
+    font-weight: 500;
+    color: #fff;
+    background: var(--brand-color);
+    cursor: pointer;
+    border-radius: 0.5rem;
+    margin-top: 10px;
+}
+
+.konfir-link {
+    text-decoration: none;
+    margin-right: 20px;
+    margin-left: auto;
+}
+.konfir-link a {
+    margin-top: 2px;
+}

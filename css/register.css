@@ -30,7 +30,7 @@ main {
 }
 
 .form-container form{
-    margin-top: 1px;
+    margin-top: -15px;
     border-radius: 30px;
     padding:20px 20px;
     background-color: #FFFF;
@@ -46,7 +46,7 @@ main {
 .form-container select {
     height: 50px;
     border-radius: 10px;
-    padding: 20px;
+    padding: 10px;
 }
 .form-container h3{
     padding: 5px;
@@ -58,14 +58,22 @@ main {
     background: var(--brand-color);
     cursor: pointer;
     border-radius: 0.5rem;
-    margin-top: 10px;
+    margin-top: 30px;
 }
 
 .konfir-link {
-    text-decoration: none;
-    margin-right: 20px;
-    margin-left: auto;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 25px;
+    align-items: center;
+    margin-top: -110px;
 }
+
 .konfir-link a {
-    margin-top: 2px;
+    margin-top: 20px;
+}
+
+.remember-link {
+    text-decoration: none;
+    margin-left: 200px;
 }

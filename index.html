@@ -3,16 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pendaftaran</title>
+    <title>Register</title>
+    <link rel="stylesheet" href="css/register.css">
+    <script src="https://kit.fontawesome.com/c5b31b49c9.js" crossorigin="anonymous"></script>
 </head>
 <body>
-   <head>
+  <header>
     <main>
-        <section>
-            
+        <section class="main" id="main-first">
+            <div class="back-button">
+                <a href=""><i class="fa-solid fa-arrow-left"></i></a>
+            </div>
+            <div class="register-logo">
+                <img src="assets/LogoSkillHealth.png" alt="">
+            </div>
+            <div class="register-title">
+                <h3>Selamat Datang di</h3>
+                <h2>SkilHealth !</h2>
+            </div>
+        </section>
+
+        <section class="form-container" id="register-form">
+           <form action="">
+            <h3>Nama</h3>
+            <input id="Nama" type="text" placeholder="Masukan Nama">
+            <h3>Tanggal Lahir</h3>
+            <input id="tanggal" type="date" placeholder=" Masukan tanggal lahir">
+            <h3>Jenis Kelamin</h3>
+            <select class="" name="jenis-kelamin">
+                <option value="Laki-laki">Laki-Laki</option>
+                <option value="perempuan">Perempuan</option>
+            </select>
+            <h3>No.Telepon</h3>
+            <input id="telepon" type="text" placeholder="Masukan No.Telepon">
+            <h3>Email</h3>
+            <input id="email" type="text" placeholder="Masukan Email">
+            <h3>Password</h3>
+            <input id="password" type="text" placeholder="Masukan Password">
+            <h3>Konfirmasi Password</h3>
+            <input id="konfirmasi password" type="text" placeholder="Konfirmasi Password">
+            <button class="regis-button" id="register-form">Register</button>
+           </form>
+           <div class="konfir-link">
+            <a href="#" class="konfir-link">Sudah Punya Akun ?</a>
+           </div>
         </section>
     </main>
-   </head>>
+  </header>
     
 </body>
 </html>

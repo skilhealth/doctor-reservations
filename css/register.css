@@ -1,0 +1,31 @@
+@import "style.css";
+
+main {
+    margin-top: 20px;
+}
+.back-button {
+    margin-top: 30px;
+    font-weight: 700px;
+    margin-left: 20px;
+    align-self: flex-start;
+}
+.register-logo img {
+    display: flex;
+    width: 64px;
+    height: 68px;
+    margin-left: 172px;
+    margin-top: -25px;
+}
+
+.register-title {
+    align-items: center;
+}
+.register-title h3 {
+  text-align: center;
+  font-weight: bold;
+  font-family: 'Open Sans', sans-serif;
+}
+.register-title h2 {
+    text-align: center;
+}
+

@@ -82,7 +82,7 @@ main {
     margin-left: auto;
 }
 
-@media screen and (min-width: 620px) {
+@media screen and (min-width: 670px) {
     .back-button {
         display: none;
     }

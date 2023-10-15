@@ -1,35 +1,13 @@
-function handleGetFormData() {
-    let usernameInput= document.getElementById("Username/Email")
-    let passwordInput= document.getElementById("Password")
-    let loginButton = document.getElementById("login-form")
+function func() {
+  var username = document.getElementById("Username/Email").value;
+  var pass = document.getElementById("Password").value;
 
-    loginButton.addEventListener('click', function(event) {
-        event.preventDefault();
-
-        let username = usernameInput.value;
-        let password = passwordInput.value;
-
-    if (username && password) {
-        let.log('Username/Email:', username);
-        let.log('Password:', password);
-
-    } else {
-        alert('Please enter a username/email and password.');
-    }
-    });
-
-    function checkboxIsChecked(){
-        if(document.getElementById("remember").checked){
-            return true
-        }else{
-            return false
-        }
-    }
-} 
-
-
-
-
-
-
+  if (username == 'skillhealth01' && pass == '12345'){
+    alert("Succesfull Login")
+    window.location.assign("home.html")
+  }
+  else{
+    alert("Login Invalid")
+  }
+}
 

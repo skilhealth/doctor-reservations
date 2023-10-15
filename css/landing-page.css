@@ -1,0 +1,173 @@
+@import "style.css";
+
+body{
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  height: 100vh;
+}
+
+.content{
+  margin: 50px 30px;
+  background: var(--brand-color);
+  border-radius: 12px;
+  width: auto;
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.content article{
+  padding-left: 15px;
+  padding-top : 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.content article h1{
+  color: var(--main-base);
+  font-size: 16px;
+}
+
+.content article button{
+  margin-bottom: 20px;
+  background:var(--main-base);
+  border-radius: 10px;
+  border: var(--text-color);
+  width: 100px;
+  height: auto;
+}
+
+.content article button:hover{
+  transition: 0.3s;
+  opacity: 0.6;
+}
+
+.content article button a{
+  text-decoration: none;
+  font-weight: bold;
+  color: var(--brand-color);
+}
+
+.content figure{
+  height: 187.24px;
+}
+
+.content figure img{
+  border-radius: 12px;
+  width: 160px;
+}
+
+footer{
+  background: var(--danger);
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 15px;
+}
+
+.bottom-logo{
+  display: flex;
+  align-items: center;
+}
+
+.bottom-logo:hover{
+  transition: 0.3s;
+  opacity: 0.6;
+}
+
+.bottom-logo img{
+  height: 40px;
+}
+
+.bottom-logo h1{
+  color: var(--main-base);
+  font-size: 18px;
+  margin-left: 5px;
+}
+
+.bottom-nav{
+  display: flex;
+  flex-direction: column;
+  margin-top: 15px;
+}
+
+.bottom-nav .bottom-nav-list{
+  list-style: none;
+}
+
+.bottom-nav .bottom-nav-list li{
+  margin-top: 5px;
+}
+
+.bottom-nav .bottom-nav-list li a{
+  text-decoration: none;
+  color: var(--main-base);
+  font-size: 14px;
+}
+
+.bottom-nav .bottom-nav-list li a:hover{
+  transition: 0.3s;
+  opacity: 0.6;
+}
+
+.bottom-nav h1{
+  color: var(--main-base);
+  margin-top: 10px;
+  margin-bottom: 5px;
+  font-size: 14px;
+}
+
+.social-icon{
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  margin: 0;
+  padding: 0;
+  
+}
+
+.social-icon svg{
+  height: 30px;
+  width: auto;
+}
+
+.social-icon svg:hover{
+  transition: 0.3s;
+  opacity: 0.6;
+}
+
+@media(min-width: 670px){
+  .content article h1{
+    font-size: 24px;
+  }
+
+  .content article button{
+    width: 200px;
+    height: 30px;
+  }
+
+  .content article button a{
+    font-size: 20px;
+  }
+
+  .bottom-logo img{
+    height: 80px;
+  }
+
+  .bottom-logo h1{
+    font-size: 24px;
+  }
+
+  .bottom-nav .bottom-nav-list li a{
+    font-size: 16px;
+  }
+
+  .bottom-nav h1{
+    font-size: 16px;
+  }
+
+  .social-icon svg{
+    height: 40px;
+  }
+}

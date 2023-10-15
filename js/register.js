@@ -1,82 +1,51 @@
-const form = document.getElementById("form");
-const nama = document.getElementById("Nama");
-const telepon = document.getElementById("telepon");
-const email = document.getElementById("email");
-const pass = document.getElementById("password");
-const pass2 = document.getElementById("konfirmasi password");
-
-   form.addEventListener('submit', e => {
-    e.preventDefault();
-
-    validateInputs();
-   });
-
-const setError = (element, message) => {
-    const inputControl = element.parentElement;
-    const errorDisplay = inputControl.querySelector('.error');
-
-    errorDisplay.innerText = message;
-    inputControl.classList.add('error');
-    inputControl.classList.remove('success')
-}
-
-const setSuccess = element => {
-    const inputControl = element.parentElement;
-    const errorDisplay = inputControl.querySelector('.error');
-
-    errorDisplay.innerText = '';
-    inputControl.classList.add('success');
-    inputControl.classList.remove('error');
-};
-const isValidEmail = email => {
-    const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    return re.test(String(email).toLowerCase());
-}
-
-const validateInputs = () => {
-    const namaValue = nama.value.trim();
-    const emailValue = email.value.trim();
-    const teleponValue = telepon.value.trim();
-    const passValue = password.value.trim();
-    const pass2Value = konfirmasipassword.value.trim();
-    
-    if(namaValue === '') {
-        setError(nama, 'nama is required');
-    } else {
-        setSuccess(nama);
+const form = document.getElementById('form');
+form.addEventListener('submit', function (e) {
+    // Perform form validation here
+    if (!validateForm()) {
+        e.preventDefault(); // Prevent form submission if validation fails
     }
+});
 
-    if(emailValue === '') {
-        setError(email, 'Email is required');
-    } else if (!isValidEmail(emailValue)) {
-        setError(email, 'Provide a valid email address');
-    } else {
-        setSuccess(email);
-    }
+function validateForm() {
+    const nama = document.getElementById('Nama').value;
+    const tanggal = document.getElementById('tanggal').value;
+    const jenisKelamin = document.getElementById('jenisKelamin').value;
+    const telepon = document.getElementById('telepon').value;
+    const email = document.getElementById('email').value;
+    const password = document.getElementById('password').value;
+    const konfirmasiPassword = document.getElementById('konfirmasiPassword').value;
 
-    if(teleponValue === '') {
-        setError(telepon, 'telepon is required');
-    } else if (!isValidtelepon(teleponValue)) {
-        setError(telepon, 'Set telepon number');
-    } else {
-        setSuccess(telepon);
-    }
+            if (nama === '') {
+                alert('Nama harus diisi.');
+                return false;
+            }
 
-    if(passwordValue === '') {
-        setError(password, 'Password is required');
-    } else if (passwordValue.length < 8 ) {
-        setError(password, 'Password must be at least 8 character.')
-    } else {
-        setSuccess(password);
-    }
+            if (tanggal === '') {
+                alert('Tanggal lahir harus diisi.');
+                return false;
+            }
 
-    if(konfirmasipassword === '') {
-        setError(konfirmasipassword, 'Please confirm your password');
-    } else if (konfirmasipasswordValue !== passwordValue) {
-        setError(konfirmasipassword, "Passwords doesn't match");
-    } else {
-        setSuccess(konfirmasipassword);
-    }
+            if (jenisKelamin === '') {
+                alert('Jenis kelamin harus dipilih.');
+                return false;
+            }
 
+            if (telepon === '') {
+                alert('No.Telepon harus diisi.');
+                return false;
+            }
 
- };
+            if (email === '') {
+                alert('Email harus diisi.');
+                return false;
+            }
+
+            // Add more validation rules for password and konfirmasiPassword here
+
+            if (password !== konfirmasiPassword) {
+                alert('Password dan Konfirmasi Password harus cocok.');
+                return false;
+            }
+
+            return true; // If all validations pass
+        }

@@ -77,3 +77,32 @@ main {
     text-decoration: none;
     margin-left: 200px;
 }
+
+@media screen and (min-width: 620px) {
+    .back-button {
+        display: none;
+    }
+    .register-logo img {
+        display: flex;
+        margin-left: 730px;
+        margin-top: 10px;
+    }
+    .register-title {
+        align-items: center;
+        margin: 0 auto;
+    }
+    .form-container form {
+        width: 400px;
+        margin-left: 560px;
+        margin-top: 5px;
+    }
+    .remember-link{
+        display: flex;
+        text-decoration: none;
+        margin-left: 750px;
+    }
+
+
+
+
+}

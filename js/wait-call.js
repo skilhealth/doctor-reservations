@@ -1,11 +1,18 @@
 let card = document.getElementsByClassName("card")
+const getDetail = sessionStorage.getItem('detail')
+
 async function getCalldata(index,day){
     try{
         let result = await fetch(`https://6525187f67cfb1e59ce69680.mockapi.io/doctor/${index}`)
         let doctor = await result.json()
-        const date = doctor.schedule[day].day + ", " + doctor.schedule[day].date;
+        let daydate
+        doctor.schedule.map((item,index) =>{
+            if(item.day==day){
+                daydate = item.day + ", " + item.date
+            }
+        })
         let cardData = `
-            <p>${date}</p>
+            <p>${daydate}</p>
             <hr>
             <h3>${doctor.name}</h3>
             <small>${doctor.specialist}</small>
@@ -20,4 +27,4 @@ async function getCalldata(index,day){
         console.log(err)
     }
 }
-getCalldata(0,2)
+getCalldata(parsedetail.doctorId,parsedetail.day)

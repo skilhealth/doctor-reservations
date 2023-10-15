@@ -1,4 +1,6 @@
 let card = document.getElementsByClassName("card")
+const getDetail = sessionStorage.getItem('detail')
+const parsedetail = JSON.parse(getDetail)
 
 async function getDoctorData(index){
     try{
@@ -20,4 +22,4 @@ async function getDoctorData(index){
         console.log(err)
     }
 }
-getDoctorData(0)
+getDoctorData(parsedetail.doctorId)

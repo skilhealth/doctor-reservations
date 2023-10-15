@@ -1,6 +1,9 @@
 let cardStatus = document.getElementById("card")
 let profile = document.getElementById("profile")
 let infoDoctor = document.getElementsByClassName("info-doctor")
+const getDetail = sessionStorage.getItem('detail')
+const parsedetail = JSON.parse(getDetail)
+
 
 async function getDataDoctor(index, day) {
     try {
@@ -41,14 +44,24 @@ async function getDataDoctor(index, day) {
             let dataExp = `<li> ${item} </li>`
             let listexp = + dataExp
         })
-        let daydate = doctor.schedule[day].day + ", " + doctor.schedule[day].date
+        let daydate
+        doctor.schedule.map((item,index) =>{
+            if(item.day==day){
+                daydate = item.day + ", " + item.date
+                schedulework = item.work
+            }
+        })
         let badge;
-        if (doctor.schedule[day].work == "Regular") {
+        let btnLink;
+        if (schedulework == "Regular") {
             badge = `<div class="work" style="background-color: #0FF033;color: #FFFFFF;">Regular</div>`
-        } else if (doctor.schedule[day].work == "Daring") {
+            btnLink = '<a href="check-in-queue.html"><button class="btn-in">Masuk</button></a>'
+        } else if (schedulework == "Daring") {
             badge = `<div class="work" style="background-color: #ECF00F;color: #000000;">Daring</div>`
+            btnLink = '<a href="wait-call.html"><button class="btn-in">Masuk</button></a>'
         } else {
-            badge = `<div class="work" style="background-color: #740A0A;color: #FFFFFF;">${doctor.schedule[day].work}</div>`
+            badge = `<div class="work" style="background-color: #740A0A;color: #FFFFFF;">${schedulework}</div>`
+            btnLink = '<a href="homecare-status.html"><button class="btn-in">Masuk</button></a>'
         }
         let carddata = `
         <div class="info-schedule">
@@ -57,13 +70,12 @@ async function getDataDoctor(index, day) {
             <div>${doctor.hospital}</div>
         </div>
         <hr>
-        <a href="check-in-queue.html"><button class="btn-in">Masuk</button></a>
         `
-        cardStatus.innerHTML = carddata
+        cardStatus.innerHTML = carddata+btnLink
     }
     catch (err) {
         console.log(err)
     }
 
 }
-getDataDoctor(9, 1)
+getDataDoctor(parsedetail.doctorId,parsedetail.day)

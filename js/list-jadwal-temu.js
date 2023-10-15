@@ -1,4 +1,5 @@
-let myToken = ['AB123Z', 'GA682H', 'OP111R']
+const getToken = sessionStorage.getItem("token")
+let myToken = JSON.parse(getToken)
 
 function getbadge(work) {
     if (work == "Regular") {
@@ -17,6 +18,7 @@ function findDoctor(token, doctors) {
             for (let queue of schedule.queue) {
                 if (queue.token === token) {
                     return {
+                        id : doctor.id,
                         name: doctor.name,
                         images: doctor.images,
                         work: schedule.work,
@@ -36,13 +38,13 @@ async function getDoctorData() {
     try {
         let result = await fetch("https://6525187f67cfb1e59ce69680.mockapi.io/doctor")
         let doctors = await result.json()
-        // console.log(findDoctor('AB123Z',doctors))
         myToken.forEach(function (token) {
-            var doctorData = findDoctor(token,doctors);
+            var doctorData = findDoctor(token, doctors);
             if (doctorData) {
                 let scheduleDate = doctorData.day + "," + doctorData.date
-                let carddata = `
-                        <div class="card">
+                const profileCard = document.createElement('div')
+                profileCard.classList.add('card')
+                    let carddata = `
                             <img id="doctor-img" src="${doctorData.images}.png" alt="profile">
                             <div class="profile-container">
                                 <div class="status">
@@ -53,9 +55,20 @@ async function getDoctorData() {
                                 <p>${doctorData.specialist}</p>
                                 <p>${doctorData.hospital}</p>
                             </div>
-                        </div>
                         `
-                warp.innerHTML += carddata
+                    
+                profileCard.addEventListener('click',() => {
+                    let detail  = {
+                        doctorId : doctorData.id,
+                        token : token,
+                        day : doctorData.day
+                    }
+                    sessionStorage.setItem('detail',JSON.stringify(detail))
+                    window.location = "../page/schecule-info-after-booking.html"
+                })
+                profileCard.innerHTML = carddata
+                warp.appendChild(profileCard)
+                // warp.insertAdjacentHTML('beforeend', );
             }
         })
 

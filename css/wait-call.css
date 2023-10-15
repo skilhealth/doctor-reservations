@@ -45,3 +45,17 @@ button{
 hr{
     margin: 8px 0;
 }
+.main-wrap > h2{
+    display: none;
+    
+
+}
+
+@media(min-width: 670px) {
+    .main-wrap > h2{
+        display: flex;
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+
+}

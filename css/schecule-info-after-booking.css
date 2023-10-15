@@ -107,6 +107,19 @@ figure>img {
     font-weight: 600;
     width: 100%;
 }
+.main-wrap > h2{
+    display: none;
+    
+
+}
 
 
 /* desktop view */
+
+@media(min-width: 670px) {
+    .main-wrap > h2{
+        display: flex;
+        justify-content: center;
+    }
+
+}

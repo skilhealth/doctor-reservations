@@ -1,3 +1,5 @@
 function backpage(){
-    window.history.back()
+    history.back();
+    // const beforepage = document.referrer
+    // window.location.replace(beforepage)
 }

@@ -1,0 +1,8 @@
+@import "style.css";
+
+.back-button {
+    margin-top: 30px;
+    font-weight: 700px;
+    margin-left: 20px;
+    align-self: flex-start;
+}

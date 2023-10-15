@@ -25,29 +25,29 @@
         </section>
 
         <section class="form-container" id="register-form">
-           <form  id = "form" action="/">
-            <h3>Nama</h3>
-            <input id="Nama" type="text" placeholder="Masukan Nama">
-            <h3>Tanggal Lahir</h3>
-            <input id="tanggal" type="date" placeholder=" Masukan tanggal lahir">
-            <h3>Jenis Kelamin</h3>
-            <select class="" name="jenis-kelamin">
-                <option value="Laki-laki">Laki-Laki</option>
-                <option value="perempuan">Perempuan</option>
-            </select>
-            <h3>No.Telepon</h3>
-            <input id="telepon" type="text" placeholder="Masukan No.Telepon">
-            <h3>Email</h3>
-            <input id="email" type="email" placeholder="Masukan Email">
-            <h3>Password</h3>
-            <input id="password" type="password" placeholder="Masukan Password">
-            <h3>Konfirmasi Password</h3>
-            <input id="konfirmasi password" type="password" placeholder="Konfirmasi Password">
-            <button class="regis-button" type="button" onclick="submitData()"  id="register-form">Register</button>
-           </form>
-           <div class="konfir-link">
-            <a href="" class="remember-link">Sudah punya akun ?</a>
-           </div>
+            <form id="form-register">
+                <h3>Nama</h3>
+                <input id="nama" name="nama" type="text" placeholder="Masukan Nama">
+                <h3>Tanggal Lahir</h3>
+                <input id="tanggal" name="tanggal" type="date" placeholder=" Masukan tanggal lahir">
+                <h3>Jenis Kelamin</h3>
+                <select class="" id="jenis_kelamin" name="jenis_kelamin">
+                    <option value="Laki-laki">Laki-Laki</option>
+                    <option value="perempuan">Perempuan</option>
+                </select>
+                <h3>No.Telepon</h3>
+                <input id="telepon" name="telepon" type="text" placeholder="Masukan No.Telepon">
+                <h3>Email</h3>
+                <input id="email" type="email" placeholder="Masukan Email">
+                <h3>Password</h3>
+                <input id="password" type="password" placeholder="Masukan Password">
+                <h3>Konfirmasi Password</h3>
+                <input id="konfirmasi_password" type="password" placeholder="Konfirmasi Password">
+                <button class="regis-button" type="button" onclick="submitData()" id="register-form">Register</button>
+            </form>
+            <div class="konfir-link">
+                <a href="" class="remember-link">Sudah punya akun ?</a>
+            </div>
         </section>
     </main>
   </header>

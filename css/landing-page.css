@@ -138,6 +138,12 @@ footer{
 }
 
 @media(min-width: 670px){
+  
+  .content{
+    margin: 100px 20px;
+    height: 234.05px;
+  }
+
   .content article h1{
     font-size: 24px;
   }
@@ -151,12 +157,16 @@ footer{
     font-size: 20px;
   }
 
+  .content figure img{
+    width: 200px;
+  }
+
   .bottom-logo img{
     height: 80px;
   }
 
   .bottom-logo h1{
-    font-size: 24px;
+    font-size: 30px;
   }
 
   .bottom-nav .bottom-nav-list li a{

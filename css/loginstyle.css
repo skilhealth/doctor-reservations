@@ -90,25 +90,49 @@ main {
     .login-title {
         padding: 12px;
         align-items: center;
-        margin: 30px;
+        margin-left: 20px;
+        margin: 50px;
     }
     .login-title h2 {
         text-align: center;
+        margin-right: 20px;
     }
     .login-title h3 {
         text-align: center;
-        margin-left: 140px;
+        margin-left: 100px;
     }
 
     .login-logo img {
-        text-align: center;
-        margin-bottom: -140px;
         left: 570px;
-        bottom: 20px;
+        bottom: 10px;
     }
-    
-    
-
+    .form-container form {
+        display: flex;
+        width: 360px;
+        margin-left: 580px;
+        margin-top: 10px;
+    }
+    .form-container input {
+        height: 50px;
+        border-radius: 10px;
+        padding: 20px;
+        width: 360px;
+    }
+    .form-container .main-button {
+        width: 360px;
+    }
+    .remember-forgot {
+      display: flex;
+      justify-content: space-between;
+      margin-left: 605px;
+    }
+    .remember-forgot #remember {
+        margin-right: 2px;
+    } 
+    .forgot-link {
+        text-decoration: none;
+        margin-right: 580px;
+    } 
 }
 
 

@@ -1,5 +1,6 @@
 let card = document.getElementsByClassName("card")
 const getDetail = sessionStorage.getItem('detail')
+const parsedetail = JSON.parse(getDetail)
 
 async function getCalldata(index,day){
     try{

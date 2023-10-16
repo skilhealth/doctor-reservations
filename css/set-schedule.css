@@ -1,2 +1,53 @@
 @import url("../css/style.css");
 
+body{
+    display: flex;
+    flex-direction: column;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 800px;
+}
+
+.card{
+    background: var(--second-base);
+    margin: 15px;
+    padding: 15px;
+    border-radius: 12px;
+}
+
+.card-head{
+    display: flex;
+    justify-content: space-between;
+}
+
+.card-head figure img{
+    width: 100px;
+    border-radius: 12px;
+}
+
+.card-head ul{
+    list-style: none;
+    margin-left: 5px;
+}
+
+.status{
+    display: flex;
+    align-items: center;
+    
+}
+
+.status #status-color{
+    height: 15px;
+    width: 15px;
+    background-color: green;
+    border-radius: 50%;
+}
+
+.status #detail-status{
+    margin-left: 5px;
+}
+

@@ -168,5 +168,33 @@
  font: "Poppins", sans-serif;
 }
 
+@media(min-width: 670px) {
+  .back-button span {
+    display: flex;
+    font: "Poppins", sans-serif;
+  }
+
+  .dokter1 {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    justify-self: center;
+    flex-shrink: 0;
+    position: relative;
+  }
+
+  .card1 {
+    border-radius: 10px;
+    width: 380px;
+    height: 150px;
+    display: flex;
+    position: relative;
+    align-items: center;
+  }
+
+
+}
+
 
 

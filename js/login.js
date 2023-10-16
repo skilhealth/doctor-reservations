@@ -35,7 +35,10 @@ function Login() {
           return alert("Email atau Password Salah!");
         } else {
           localStorage.setItem("userData", JSON.stringify(user));
-          window.location.replace("http://127.0.0.1:7777/dashboard.html");
+          alert("Login Berhasil!")
+          setTimeout(function() {
+            window.location.replace("./dashboard.html");
+          }, 2000);
         }
       }
     })

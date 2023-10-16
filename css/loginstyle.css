@@ -76,11 +76,6 @@ main {
     margin-top: 2px;
 }
 
-.forgot-link {
-    text-decoration: none;
-    margin-right: 20px;
-    margin-left: auto;
-}
 
 @media screen and (min-width: 670px) {
     .back-button {

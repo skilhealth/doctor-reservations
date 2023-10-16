@@ -7,8 +7,9 @@
     <script src="https://kit.fontawesome.com/c5b31b49c9.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../css/search-doctor.css">
     <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> -->
-    <script src="../js/main.js"></script>
-    <script src="../js/search-doktor.js"></script>
+    <link rel="shortcut icon" href="../assets/LogoSkillHealth.png">
+    <script src="../js/main.js" defer></script>
+    <script src="../js/search-doktor.js" defer></script>
     <title>Search</title>
 </head>
 <body>
@@ -37,10 +38,10 @@
                 <span>Pencarian Dokter</span>
             </div>
             <section class="form-box">
-                <form action="" class="card">
+                <form action="" class="card" id="form" autocomplete="off">
                     <h2>Pencarian Dokter</h2>
                     <div class="input-wrap">
-                        <input type="text" placeholder="Cari Dokter">
+                        <input type="text" placeholder="Cari Dokter" id="cari">
                     </div>
                     <div class="input-wrap">
                         <label for="day">Hari</label>
@@ -80,7 +81,7 @@
                         </select>
                     </div>
                     <div class="btn-container">
-                        <button type="submit">Cari</button>
+                        <button type="submit" id="submit">Cari</button>
                     </div>
                 </form>
             </section>

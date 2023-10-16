@@ -153,6 +153,11 @@ body{
     .nav-content li a{
         font-size: 20px
     }
+
+    /* -------------------End Nav Bar----------------------- */
+
+    .back-button{
+        display: none;
+    }
 }
 
-/* -------------------End Nav Bar----------------------- */

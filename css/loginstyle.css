@@ -85,28 +85,15 @@ main {
     .login-title {
         padding: 12px;
         text-align: center;
-        align-items: center;
-        margin-left: 20px;
         margin: 50px;
-    }
-    .login-title h2 {
-        text-align: center;
-        margin-right: 20px;
-    }
-    .login-title h3 {
-        text-align: center;
-        margin-left: 100px;
     }
 
     .login-logo img {
-        left: 570px;
-        bottom: 10px;
+        align-items: center;
     }
     .form-container form {
         display: flex;
         width: 360px;
-        margin-left: 580px;
-        margin-top: 10px;
     }
     .form-container input {
         height: 50px;
@@ -118,17 +105,10 @@ main {
         width: 360px;
     }
     .remember-forgot {
+      align-items: center;
       display: flex;
       justify-content: space-between;
-      margin-left: 605px;
     }
-    .remember-forgot #remember {
-        margin-right: 2px;
-    } 
-    .forgot-link {
-        text-decoration: none;
-        margin-right: 580px;
-    } 
 }
 
 

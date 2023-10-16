@@ -8,18 +8,16 @@ let form = document.getElementById("form")
 
 async function getData() {
     try {
-        const result = await fetch('https://6525187f67cfb1e59ce69680.mockapi.io/doctor')
-        const doctors = await result.json()
-        return doctors
+        let result = await fetch('https://6525187f67cfb1e59ce69680.mockapi.io/doctor')
+        let doctors = await result.json()
+        console.log(doctors)
     }
     catch (err) {
         console("Error Fetching" + err)
     }
 }
 let getdoctor = getData()
-getdoctor.map((item, index) => {
-    console.log(item.name)
-})
+console.log(getdoctor)
 
 
 // form.addEventListener('submit', )

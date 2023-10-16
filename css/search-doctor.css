@@ -1,2 +1,31 @@
 @import url(style.css);
 
+.form-box{
+    display: flex;
+}
+.card{
+    display: flex;
+    flex-direction: column;
+    background-color: var(--second-base);
+    border-radius: 10px;
+
+    margin: 20px;
+    padding: 17px 13px;
+
+    width: 100%;
+}
+.input-wrap{
+    display: flex;
+    width: 100%;
+    margin-bottom: 15px;
+    flex-direction: column;
+    gap: 10px;
+    font-weight: 500;
+}
+.input-wrap > input,select{
+    width: 100%;
+    border: solid 0.4px;
+    border-radius: 10px;
+    padding: 15px;
+    background-color: var(--main-base);
+}

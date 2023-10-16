@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/c5b31b49c9.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../css/search-doctor.css">
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> -->
     <script src="../js/main.js"></script>
     <script src="../js/search-doktor.js"></script>
     <title>Search</title>
@@ -35,6 +36,51 @@
                 <a href=""><i class="fa-solid fa-arrow-left"></i></a>
                 <span>Pencarian Dokter</span>
             </div>
+            <section class="form-box">
+                <form action="" class="card">
+                    <div class="input-wrap">
+                        <input type="text" placeholder="Cari Dokter">
+                    </div>
+                    <div class="input-wrap">
+                        <label for="day">Hari</label>
+                        <select name="day" id="day">
+                            <option selected>Pilih Hari</option>
+                            <option value="senin">Senin</option>
+                            <option value="selasa">Selasa</option>
+                            <option value="rabu">Rabu</option>
+                            <option value="kamis">Kamis</option>
+                            <option value="jumat">Jumat</option>
+                            <option value="sabtu">Sabtu</option>
+                            <option value="minggu">Minggu</option>
+                        </select>
+                    </div>
+                    <div class="input-wrap">
+                        <label for="area">Hari</label>
+                        <select name="area" id="area">
+                            <option selected>Pilih Area</option>
+                        </select>
+                    </div>
+                    <div class="input-wrap">
+                        <label for="hospital">Rumah Sakit</label>
+                        <select name="hospital" id="hospital">
+                            <option selected>Pilih Rumah sakit</option>
+                        </select>
+                    </div>
+                    <div class="input-wrap">
+                        <label for="specialist">Specialist</label>
+                        <select name="specialist" id="specialist">
+                            <option selected>Pilih Specialist</option>
+                        </select>
+                    </div>
+                    <div class="input-wrap">
+                        <label for="metode">Metode Pertemuan</label>
+                        <select name="metode" id="metode">
+                            <option selected>Pilih Metode</option>
+                        </select>
+                    </div>
+                    <div class="button"></div>
+                </form>
+            </section>
         </div>
     </main>
     

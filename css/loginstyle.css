@@ -6,40 +6,26 @@ body {
 .back-button {
     margin-top: 30px;
     font-weight: 700px;
-    margin-left: 20px;
+    margin-right: 300px;
     align-self: flex-start;
 }
-.title {
+.logo-title {
    text-align: center;
     margin-right: 50px;
 }
-.login-title {
-    align-items: center;
-    margin-left: 65px;
-}
-.login-title p {
+.logo-title p {
     text-align: center;
     font-weight: bold;
-    margin-right: 75px;
-    font-family: 'Open Sans', sans-serif;
-
-}
-.login-title p {
     margin-left: 50px;
-    font-weight: bold;
     font-family: 'Open Sans', sans-serif;
-}
-.logo {
-    display: flex;
     align-items: center;
-    margin-right: 135px;
 }
-.login-logo img {
+.logo-title img {
     display: flex;
     position: relative;
     width: 165px;
     height: 165px;
-    margin-left: 126px;
+    margin-left:80px;
     align-items: center;
     bottom: -30px;
 }
@@ -70,6 +56,10 @@ body {
     border-radius: 0.5rem;
     margin-top: 40px;
 }
+.form-container .main-button  :hover {
+    transition: 0.3s;
+    opacity: 0.6;
+}
 .remember-forgot {
     display: flex;
     justify-content: space-between;
@@ -93,25 +83,31 @@ body {
     body {
     display: flex;
     }
-    main {
+    .main {
         display: flex;
         align-items: center;
         flex-direction: column;
         max-width: 800px;
-        padding: 20px;
+        margin: 100px;
     }
-    .login-title {
-        text-align: center;
+    .logo-title {
         align-items: center;
-        padding: 21px;
+        margin: 7px;
     }
-    .login-logo {
+    .logo-title p{
+        text-align: center;
+    }
+    .logo-title img {
         max-width: 100%;
         align-items: center;
         display: flex;
     }
-    .form-input {
-        width: 100%;
+    .form-container{
+        width: 200%;
+    }
+    .form-login {
+        display: flex;
+        align-items: center;
     }
 }
 

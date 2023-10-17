@@ -1,50 +1,45 @@
-let cariValue = document.getElementById("cari")
-let dayValue = document.getElementById("day")
-let areaValue = document.getElementById("area")
-let hospitalValue = document.getElementById("hospital")
-let specialistValue = document.getElementById("specialist")
-let metodeValue = document.getElementById("metode")
-let form = document.getElementById("form")
-
-function findElementsWithCount(array, targetCount) {
-    const frequencyCounter = array.reduce((acc, curr) => {
-        acc[curr] = (acc[curr] || 0) + 1;
-        return acc;
-    }, {});
-
-    const elementsWithTargetCount = Object.keys(frequencyCounter).filter(element => frequencyCounter[element] === targetCount);
-
-    return elementsWithTargetCount;
-}
+const cariValue = document.getElementById("cari")
+const dayValue = document.getElementById("day")
+const areaValue = document.getElementById("area")
+const hospitalValue = document.getElementById("hospital")
+const specialistValue = document.getElementById("specialist")
+const metodeValue = document.getElementById("metode")
+const form = document.getElementById("form")
 
 function cariDokter(doctors, name, day, hospital, specialist, metode) {
-    name = name || '';
+    name = name.toLowerCase() || '';
     day = day || '';
     hospital = hospital || '';
     specialist = specialist || '';
     metode = metode || '';
 
     let doktorid = []
-    let found1 = 0, found2 = 0, found3 = 0, found4 = 0, found5 = 0
+    let found = 0
     doctors.forEach((element) => {
+        let count = 0;
+        let fullName = element.name.toLowerCase()
+        if (fullName.includes(name)) {
+            count++;
+        }
         if (specialist === element.specialist) {
-            doktorid.push(element.id)
-            found1 = 1;
+            count++;
         }
         if (hospital === element.hospital) {
-            doktorid.push(element.id)
-            found2 = 1;
+            count++;
         }
         if (element.schedule.some(schedule => schedule.day === day)) {
-            doktorid.push(element.id)
-            found3 = 1;
+            count++;
         }
         if (element.schedule.some(schedule => schedule.work === metode)) {
-            doktorid.push(element.id)
-            found4 = 1;
+            count++;
         }
-    })
-    let found = found1 + found2 + found3 + found4 + found5
+        if (count === [name, specialist, hospital, day, metode].filter(Boolean).length) {
+            found++;
+            doktorid.push(element.id)
+        }
+
+    });
+
     return {
         doktorid: doktorid,
         get: found
@@ -63,7 +58,7 @@ async function getData() {
     }
 }
 
-function isioptionRS(doctors) {
+function hospitalOptions(doctors) {
     const hospitallist = [...new Set(doctors.map(doctorz => doctorz.hospital))]
     hospitallist.forEach(element => {
         let optionRS = `
@@ -74,7 +69,7 @@ function isioptionRS(doctors) {
     });
 }
 
-function isioptionSpecial(doctors) {
+function specialistOptions(doctors) {
     const specialists = [...new Set(doctors.map(doctorz => doctorz.specialist))]
     specialists.forEach(element => {
         let optionRS = `
@@ -86,16 +81,14 @@ function isioptionSpecial(doctors) {
 }
 
 getData().then(result => {
-    isioptionRS(result)
-    isioptionSpecial(result)
-
+    hospitalOptions(result)
+    specialistOptions(result)
 })
+
 form.addEventListener('submit', (event) => {
     event.preventDefault()
     getData().then(result => {
         let data = cariDokter(result, cariValue.value, dayValue.value, hospitalValue.value, specialistValue.value, metodeValue.value)
-        let hasil = findElementsWithCount(data.doktorid, data.get)
-        sessionStorage.setItem(listdokter,JSON.stringify(hasil))
-
+        sessionStorage.setItem('listdokter', JSON.stringify(data))
     })
 })

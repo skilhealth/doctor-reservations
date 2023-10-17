@@ -54,7 +54,7 @@ body {
     background: var(--brand-color);
     cursor: pointer;
     border-radius: 0.5rem;
-    margin-top: 40px;
+    margin-top: 20px;
 }
 .form-container .main-button  :hover {
     transition: 0.3s;
@@ -81,6 +81,7 @@ body {
         display: none;
     }
     body {
+    align-items: center;
     display: flex;
     }
     .main {
@@ -91,11 +92,9 @@ body {
         margin: 100px;
     }
     .logo-title {
+        text-align: center;
         align-items: center;
         margin: 7px;
-    }
-    .logo-title p{
-        text-align: center;
     }
     .logo-title img {
         max-width: 100%;
@@ -105,10 +104,12 @@ body {
     .form-container{
         width: 200%;
     }
-    .form-login {
+    .form-login input {
         display: flex;
         align-items: center;
+        width: 100%;
     }
+
 }
 
 

@@ -13,7 +13,7 @@ main {
     display: flex;
     width: 64px;
     height: 68px;
-    margin-left: 190px;
+    margin-left: 175px;
     margin-top: -40px;
 }
 
@@ -76,7 +76,8 @@ main {
 
 .remember-link {
     text-decoration: none;
-    margin-left: 220px;
+    margin-left: 200px;
+    cursor: pointer;
 }
 
 @media screen and (min-width: 620px) {
@@ -93,18 +94,21 @@ main {
         align-items: center;
         margin: 30px;
     }
-    .form-container input {
+    .form-container input{
         width: 100%;
     }
-    .logo img {
+    .register-logo img {
         align-items: center;
-        display: flex;
     }
     .title {
         align-items: center;
         text-align: center;
         display: flex;
         padding: 20px;
+    }
+    .konfir-link {
+        text-align: left;
+        align-items: flex-end;
     }
 
 

@@ -13,12 +13,13 @@ main {
     display: flex;
     width: 64px;
     height: 68px;
-    margin-left: 172px;
-    margin-top: -25px;
+    margin-left: 190px;
+    margin-top: -40px;
 }
 
 .register-title {
     align-items: center;
+    margin: 10px;
 }
 .register-title p {
   text-align: center;
@@ -75,7 +76,7 @@ main {
 
 .remember-link {
     text-decoration: none;
-    margin-left: 200px;
+    margin-left: 220px;
 }
 
 @media screen and (min-width: 620px) {
@@ -90,17 +91,20 @@ main {
         flex-direction: column;
         width: 100%;
         align-items: center;
-        padding: 20px;
+        margin: 30px;
     }
-    .form-container {
+    .form-container input {
         width: 100%;
     }
-    .register-logo img {
+    .logo img {
         align-items: center;
         display: flex;
     }
-    .register-title {
+    .title {
+        align-items: center;
         text-align: center;
+        display: flex;
+        padding: 20px;
     }
 
 

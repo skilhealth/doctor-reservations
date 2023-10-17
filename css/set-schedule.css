@@ -15,7 +15,6 @@ main{
 
 .main-container{
     margin: 15px;
-    border: 1px solid hsl(0 0% 83%);
     border-radius: 12px;
 }
 
@@ -24,7 +23,8 @@ main{
     padding: 15px;
     border-radius: 12px;
     max-width: 800px;
-    justify-content: center;   
+    justify-content: center;  
+    border: 1px solid hsl(0 0% 83%); 
 }
 
 .card-head{
@@ -95,6 +95,7 @@ main{
     align-items: center;
     width: auto;
     height: auto;
+    border: 1px solid hsl(0 0% 83%); 
 }
 
 .available-schedule {
@@ -148,17 +149,60 @@ main{
     border-radius: 10px;
   }
 
+  .confirm{
+    border: 1px solid hsl(0 0% 83%); 
+    border-radius: 12px;
+    margin: 15px;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .confirm-detail{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .confirm button{
+    background: var(--brand-color);
+    border: none;
+    border-radius: 12px;
+    padding: 0px 10px;
+    height: auto;
+  }
+
+  .confirm button a{
+    text-decoration: none;
+    color: var(--main-base);
+    display: block;
+    font-weight: bold;
+  }
+
+  .confirm-detail #price{
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+  .confirm-detail span{
+    font-size: 12px;
+  }
+
+  #payment-method{
+    width: auto;
+    border-radius: 10px;
+  }
+
 @media(min-width: 670px){
     
-    .card{
+    .main-container{
         margin: 30px;
         padding: 30px;
     }
+
     .card-head ul li{
         font-size: 18px;
     }
 
-    
     .doctor-status #name{
         font-size: 22px;
         font-weight: bold;
@@ -169,11 +213,39 @@ main{
     }
 
     .set-schedule{
-        margin: 30px;
-        padding: 30px;
+        margin: 15px;
+        padding: 15px;
     }
 
     .schedule span {
         font-size: 16px;
+      }
+
+    .confirm{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    #payment-method{
+        font-size: 18px;
+    }
+
+    .confirm-detail #price{
+        font-size: 18px;
+    }
+
+    .confirm-detail span{
+        font-size: 14px;
+    }
+
+    .confirm button{
+        padding: 10px 10px;
+        height: auto;
+      }
+    
+      .confirm button a{
+        font-size: 18px;
       }
 }

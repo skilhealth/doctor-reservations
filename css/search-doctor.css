@@ -5,11 +5,12 @@ main {
     padding: 17px 20px;
     display: flex;
     justify-content: center;
+    height: 100vh;
 }
 
 .main-wrap {
     width: 100%;
-    max-width: 600px;
+    max-width: 450px;
 }
 
 .form-box {
@@ -78,6 +79,9 @@ select {
     .card{
         padding: 20px 50px;
         margin-top: 0;
+    }
+    main{
+        align-items: center;
     }
     
 }

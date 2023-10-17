@@ -82,25 +82,19 @@ main {
     .back-button {
         display: none;
     }
-    .register-logo img {
+    body {
         display: flex;
-        margin-left: 730px;
-        margin-top: 10px;
     }
-    .register-title {
+    main {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
         align-items: center;
-        margin: 0 auto;
+        padding: 10px;
     }
-    .form-container form {
-        width: 400px;
-        margin-left: 560px;
-        margin-top: 5px;
-    }
-    .remember-link{
-        display: flex;
-        text-decoration: none;
-        margin-left: 750px;
-    }
+    
+
+
 
 
 

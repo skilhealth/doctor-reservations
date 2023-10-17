@@ -52,6 +52,7 @@
   justify-content: center;
   width: 170px;
   position: relative;
+  cursor: pointer;
 }
 .status-dctr {
   display: flex;
@@ -122,8 +123,8 @@
     width: 130px;
     height: 130px;
     position: relative;
-    top: 39px;
-    left: 30px;
+    top: 10px;
+    left: 10px;
   }
   .dctr-information2{
   display: flex;
@@ -133,6 +134,7 @@
   justify-content: center;
   width: 170px;
   position: relative;
+  cursor: pointer;
 }
 .status-dctr2 {
     display: flex;
@@ -142,8 +144,8 @@
     justify-content: flex-start;
     flex-shrink: 0;
     position: relative;
-    bottom: 100px;
-    left:200px;
+    bottom: 115px;
+    left: 190px;
   }
   .round2 {
     background: var(--danger, #740a0a);
@@ -162,8 +164,8 @@
 .profil-dctr2 {
     text-align: left;
     position: relative;
-    left: 200px;
-    bottom: 90px;
+    left: 190px;
+    bottom: 110px;
 }
 .profil-dctr2 h4 {
  font: "Poppins", sans-serif;
@@ -180,13 +182,13 @@
     display: flex;
     align-items: center;
     flex-direction: column;
+    gap: 15px;
     max-width: 800px;
-    padding: 20px;
+    padding: 30px;
   }
-
-
-  
-
+  .dokter {
+    width: 100%;
+  }
 
 }
 

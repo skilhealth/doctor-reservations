@@ -11,39 +11,53 @@
 <body>
     <nav class="header">
         <label class="expand">
-            <img src="../assets/LogoSkillHealth.png" class="logo"></img>
+            <img src="../assets/LogoSkillHealth.png" class="logo">
             <h1>Skilhealth</h1>
         </label>
         <section class="nav">
             <input type="checkbox" id="check">
             <label for="check" class="check-btn">
-                <i class = "fas fa-bars"></i>
+                <i class="fas fa-bars"></i>
             </label>
             <ul class="nav-content">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="index.html">Cari Dokter</a></li>
-                <li><a href="index.html">Login</a></li>
-                <li><a href="index.html">Register</a></li>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="page/search-doctor.html">Cari Dokter</a></li>
             </ul>
         </section>
     </nav>
+    <label class="back-button">
+        <a href=""><i class="fa-solid fa-arrow-left"></i></a>
+        <span>Pembayaran</span>
+    </label>
     <main class="main-container">
-        <label class="back-button">
-            <a href=""><i class="fa-solid fa-arrow-left"></i></a>
-            <span>Pembayaran</span>
+        <label class="qr-container">
+            <img src="../assets/qr-code.png">
         </label>
-        <div class="main-wrap">
-            <figure>
-                <img src="../assets/qr-code.png">
-            </figure>
-            <div class="data-wrap">
-                <div class="card">
-                </div>
-                <section id="queue-data">
-                </section>
-            </div>
-        </div>
     </main>
+    <main class="details-container">
+        <section class="payment-details">
+            <ul class="payment-description">
+                <li class="method">
+                    <span>Metode Pembayaran</span><br>
+                    <span id="method">QRIS</span>
+                </li>
+                <li class="payment-code">
+                    <span>Kode Pembayaran</span><br>
+                    <span id="payment-code">SKILL675X67</span>
+                </li>
+                <li class="price">
+                    <span>Total Pembayaran</span><br>
+                    <span id="price">RP.83.500</span>
+                </li>
+            </ul>
+        </section>
+    </main>
+    
+    <main class="main-container">
+        <button type="button"><a href="#">Cek Jadwal</a></button>
+    </main>
+        
+    
     
 <script src="../js/pembayaran.js"></script>
 </body>

@@ -24,6 +24,13 @@ main {
     width: 100%;
     display: flex;
     align-items: center;
+    box-sizing: content-box;
+}
+.card:hover{
+    border-right:5px solid var(--not-available);
+    border-bottom: 5px solid var(--not-available);
+    scale: 1.001;
+    transition: 0.3s;
 }
 .main-wrap{
     width: 100%;

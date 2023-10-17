@@ -107,6 +107,10 @@ figure>img {
     font-weight: 600;
     width: 100%;
 }
+.btn-in:hover{
+    opacity: 0.8;
+    transition: 0.3s;
+}
 .main-wrap > h2{
     display: none;
     

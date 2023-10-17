@@ -9,25 +9,21 @@ main {
     margin-left: 20px;
     align-self: flex-start;
 }
-.register-logo img {
+.logo-title img {
     display: flex;
     width: 64px;
     height: 68px;
     margin-left: 175px;
     margin-top: -40px;
 }
-
-.register-title {
+.logo-title {
     align-items: center;
     margin: 10px;
 }
-.register-title p {
+.logo-title p {
   text-align: center;
   font-weight: bold;
   font-family: 'Open Sans', sans-serif;
-}
-.register-title p {
-    text-align: center;
 }
 
 .form-container form{
@@ -97,12 +93,12 @@ main {
     .form-container input{
         width: 100%;
     }
-    .register-logo img {
+    .logo-title{
         align-items: center;
+        flex-direction: column;
     }
-    .title {
+    .logo-title img {
         align-items: center;
-        text-align: center;
         display: flex;
         padding: 20px;
     }
@@ -110,6 +106,4 @@ main {
         text-align: left;
         align-items: flex-end;
     }
-
-
 }

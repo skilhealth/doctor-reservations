@@ -6,6 +6,7 @@
     margin-left: 20px;
     align-self: flex-start;
 }
+
 .dokter1 * {
     box-sizing: border-box;
 }
@@ -169,29 +170,22 @@
 }
 
 @media(min-width: 670px) {
-  .back-button span {
-    display: flex;
-    font: "Poppins", sans-serif;
+  .back-button{
+    display: none;
   }
-
-  .dokter1 {
+  body {
     display: flex;
+  }
+  main {
+    display: flex;
+    align-items: center;
     flex-direction: column;
-    gap: 10px;
-    align-items: center;
-    justify-self: center;
-    flex-shrink: 0;
-    position: relative;
+    max-width: 800px;
+    padding: 20px;
   }
 
-  .card1 {
-    border-radius: 10px;
-    width: 380px;
-    height: 150px;
-    display: flex;
-    position: relative;
-    align-items: center;
-  }
+
+  
 
 
 }

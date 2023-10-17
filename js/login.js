@@ -34,17 +34,34 @@ function Login() {
         if (user[0].Password !== password) {
           return alert("Email atau Password Salah!");
         } else {
-          localStorage.setItem("userData", JSON.stringify(user));
-          alert("Login Berhasil!")
-          setTimeout(function() {
-            window.location.replace("./dashboard.html");
+          sessionStorage.setItem("userData", JSON.stringify(user));
+          alert("Login Berhasil!");
+          setLoginStatus(true);
+          setTimeout(function () {
+            window.location.replace("./landing-page.html");
           }, 2000);
         }
       }
     })
     .catch((error) => {
       console.log(error);
+      setLoginStatus(false);
     });
 }
 
+function setLoginStatus(isLoggedIn) {
+  sessionStorage.setItem("isLoggedIn", isLoggedIn.toString());
+}
 
+// function func() {
+//     var username = document.getElementById("Username/Email").value;
+//     var pass = document.getElementById("Password").value;
+
+//     if (username == 'skilhealth01' && pass == '12345'){
+//       alert("Succesfull Login")
+//       window.location.assign("home.html")
+//     }
+//     else{
+//       alert("Login Invalid")
+//     }
+//   }

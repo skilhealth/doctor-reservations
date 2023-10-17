@@ -6,9 +6,8 @@
     margin-left: 20px;
     align-self: flex-start;
 }
-
 .dokter1 * {
-    box-sizing: border-box;
+    box-sizing: content-box;
 }
 .dokter1 {
     display: flex;
@@ -52,7 +51,6 @@
   justify-content: center;
   width: 170px;
   position: relative;
-  cursor: pointer;
 }
 .status-dctr {
   display: flex;
@@ -89,7 +87,7 @@
  font: "Poppins", sans-serif;
 }
 .dokter2 * {
-    box-sizing: border-box;
+    box-sizing: content-box;
 }
 .dokter2 {
     display: flex;
@@ -110,6 +108,11 @@
     left: 16px;
     top: 30px;
 }
+.dokter2 :hover {
+  border-right: 5px solid var(--not-available);
+  border-bottom: 5px solid var(--not-available);
+  /*scale: 1.03; */
+}
 .fpdokter2 {
     box-sizing: border-box;
 }
@@ -123,8 +126,8 @@
     width: 130px;
     height: 130px;
     position: relative;
-    top: 10px;
-    left: 10px;
+    top: 39px;
+    left: 30px;
   }
   .dctr-information2{
   display: flex;
@@ -134,7 +137,6 @@
   justify-content: center;
   width: 170px;
   position: relative;
-  cursor: pointer;
 }
 .status-dctr2 {
     display: flex;
@@ -144,8 +146,8 @@
     justify-content: flex-start;
     flex-shrink: 0;
     position: relative;
-    bottom: 115px;
-    left: 190px;
+    bottom: 100px;
+    left:200px;
   }
   .round2 {
     background: var(--danger, #740a0a);
@@ -164,33 +166,11 @@
 .profil-dctr2 {
     text-align: left;
     position: relative;
-    left: 190px;
-    bottom: 110px;
+    left: 200px;
+    bottom: 90px;
 }
 .profil-dctr2 h4 {
  font: "Poppins", sans-serif;
 }
-
-@media(min-width: 670px) {
-  .back-button{
-    display: none;
-  }
-  body {
-    display: flex;
-  }
-  main {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    gap: 15px;
-    max-width: 800px;
-    padding: 30px;
-  }
-  .dokter {
-    width: 100%;
-  }
-
-}
-
 
 

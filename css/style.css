@@ -24,6 +24,7 @@
     --main-base: #FFFFFF;
     --second-base: #F1F5F8;
     --not-available: #D0D0D0;
+    --danger: #740A0A;
 }
 
 /* ------------------ Nav Bar ------------------ */
@@ -86,32 +87,27 @@ body {
     padding: 15px;
 }
 
-.nav-content li:hover {
-    transition: 0.3s;
-    opacity: 0.6;
-}
-
-.nav-content li a {
-    font-size: 16px;
-    font-weight: bold;
-    text-decoration: none;
-    color: var(--main-base);
-}
-
-@keyframes slide {
-    0% {
-        margin-top: 20px;
+      .nav-content li:hover{
+        transition: 0.3s;
+        opacity: 0.6;
+      }
+      
+      .nav-content li a{
+        font-size: 16px;
+        font-weight: bold;
+        text-decoration: none;
+        color: var(--main-base);
+      }
+      
+      @keyframes slide {
+        0% { margin-top: 20px; }
+        100% { margin-top: 0px; }
     }
 
-    100% {
-        margin-top: 0px;
-    }
-}
-
-#check:checked~.nav-content {
-    display: flex;
-    animation: slide 0.3s ease-in;
-}
+      #check:checked ~ .nav-content{
+        display: flex;
+        animation: slide 0.3s ease-in;
+      }
 
 
 

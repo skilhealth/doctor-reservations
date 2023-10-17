@@ -81,7 +81,10 @@ body {
     .back-button {
         display: none;
     }
-    .main {
+    body {
+    display: flex;
+    }
+    main {
         display: flex;
         align-items: center;
         flex-direction: column;
@@ -89,7 +92,6 @@ body {
         margin: 20px;
     }
     .title{
-        padding: 12px;
         text-align: center;
         margin: 50px;
     }

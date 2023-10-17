@@ -9,18 +9,15 @@ main {
     margin-left: 20px;
     align-self: flex-start;
 }
-.logo img {
+.title img{
     display: flex;
     width: 64px;
     height: 68px;
     margin-left: 175px;
-    margin-top: -40px;
+    margin-top: 10px;
 }
-.logo-title {
-    align-items: center;
-    margin: 10px;
-}
-.logo-title p {
+
+.title p {
   text-align: center;
   font-weight: bold;
   font-family: 'Open Sans', sans-serif;
@@ -55,7 +52,7 @@ main {
     background: var(--brand-color);
     cursor: pointer;
     border-radius: 0.5rem;
-    margin-top: 30px;
+    margin-top: 20px;
 }
 .form-container .regis-button :hover {
     transition: 0.3s;
@@ -85,6 +82,7 @@ main {
         display: none;
     }
     body {
+        align-items: center;
         display: flex;
     }
     main {
@@ -92,22 +90,27 @@ main {
         flex-direction: column;
         width: 100%;
         align-items: center;
-        margin: 50px;
     }
-    .form-container input {
-        width: 100%;
+    .form-container {
+        width: 200%;
     }
-    .logo-title{
+    .title {
         align-items: center;
         flex-direction: column;
-        padding: 10px;
+        margin: 20px;
     }
-    .logo img {
+    .logo p {
         align-items: center;
-        display: flex;
+        text-align: center;
+        flex-direction: column;
     }
-    .konfir-link {
-        text-align: left;
-        align-items: left;
+    .title img {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-left: 30px;
+    }
+    .form-container a {
+        text-align: right;
     }
 }

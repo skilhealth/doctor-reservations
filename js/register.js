@@ -25,7 +25,7 @@ function submitData() {
   }
 
   if (telepon.length == 0) {
-    alert("Telepone Masih Kosong!");
+    alert("Telephone Masih Kosong!");
     return false;
   }
 
@@ -74,7 +74,7 @@ function submitData() {
     .then(() => {
       alert("Pendaftaran Akun Berhasil!");
       setTimeout(function () {
-        window.location.replace("./landing-page.html");
+        window.location.replace("");
       }, 2000);
       setLoginStatus(true);
     })

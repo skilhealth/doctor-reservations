@@ -1,0 +1,57 @@
+@import "../css/style.css";
+
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    padding: 17px 20px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-container{
+    max-width: 800px;
+}
+
+figure {
+    width: 100%;
+    margin-top: 12px;
+}
+
+figure>img {
+    object-fit: cover;
+    width: 80%;
+}
+
+@media(min-width: 670px) {
+    .main-wrap {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        box-sizing: content-box;
+        padding: 30px;
+        border-radius: 10px;
+        border: 1px solid;
+
+    }
+
+    .data-wrap {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 100%;
+        gap: 30px;
+    }
+
+    .queue-data {
+        flex-wrap: nowrap;
+
+    }
+}

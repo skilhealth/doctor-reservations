@@ -76,8 +76,10 @@ function submitData() {
       setTimeout(function () {
         window.location.replace("./landing-page.html");
       }, 2000);
+      setLoginStatus(true);
     })
     .catch((error) => {
       console.log(error);
+      setLoginStatus(false);
     });
 }

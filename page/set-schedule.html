@@ -1,17 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/c5b31b49c9.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../css/set-schedule.css">
     <link rel="shortcut icon" href="../assets/LogoSkillHealth.png">
-    <script src="https://kit.fontawesome.com/c5b31b49c9.js" crossorigin="anonymous"></script>
-    <title>Skilhealth</title>
+    <script src="../js/set-schedule.js" defer></script>
+    <title>Informasi Jadwal</title>
 </head>
+
 <body>
     <nav class="header">
         <label class="expand">
-            <img src="../assets/LogoSkillHealth.png" class="logo"></img>
+            <img src="../assets/LogoSkillHealth.png" class="logo">
             <h1>Skilhealth</h1>
         </label>
         <section class="nav">
@@ -28,115 +32,23 @@
         </section>
     </nav>
     <main>
-        <label class="back-button">
-            <a href=""><i class="fa-solid fa-arrow-left"></i></a>
-            <span>Informasi Dokter</span>
-        </label>
-        <section class="main-container">
-
-            <section class="card">
-
-                <section class="doctor-status">
-
-                    <section class="card-head">
-                        <figure><img src="../assets/dr-jaydon.png"></figure>
-                        <ul>
-                            <li class="status">
-                                <div id="status-color"></div>
-                                <span id="detail-status">Aktif</span>
-                            </li>
-                            <li id="name">Dr. Jaydon Schleifer</span></li>
-                            <li id="specialist">Ahli Jantung</span></li>
-                            <li id="hospital">Skilvul Hospital Jakarta</span></li>
-                        </ul>
-                    </section>
-                </section>
-
-                <section class="doctor-details">
-                    <ul class="doctor-description">
-                        <li class="about">
-                            <h1>Tentang Dokter</h1>
-                            <span id="about">Dr. Jaydon Schleifer adalah seorang spesialis jantung berpengalaman dengan lebih dari 15 tahun praktik medis.Saat ini Beliau praktik di skilvul Hospital Jakarta.</span>
-                        </li>
-                        <li class="skd-number">
-                            <h1>Nomor SKD</h1>
-                            <span id="skd-number">10297361028361</span>
-                        </li>
-                        <li class="experience">
-                            <h1>Pengalaman Praktek</h1>
-                            <span id="experience">
-                                <ul>
-                                    <li>RSUD Abdul Rivai</li>
-                                    <li>RSUD Skilhealth</li>
-                                </ul>
-                            </span>
-                        </li>
-                        <li class="education">
-                            <h1>Pendidikan</h1>
-                            <span id="education">Universitas Kedokteran</span>
-                        </li>
-                    </ul>
-                </section>
+        <div class="back-button">
+            <a href="" onclick="backpage()"><i class="fa-solid fa-arrow-left"></i></a>
+            <span>Informasi Jadwal</span>
+        </div>
+        <div class="main-wrap">
+            <article>
+                <figure id="profile">
+                </figure>
+                <div class="info-doctor">
+                </div>
+            </article>
+            <section id="card" class="card">       
             </section>
-
-            <section class="set-schedule">
-                <h1>Jadwal Praktik</h1>
-                <section class="available-schedule">
-
-                    <ul class="tile-group">
-
-                    <li class="schedule">
-                        <input id="schedule" type="radio" name="radio">
-                        <label class="details">
-                            <span id="type">Reguler</span>
-                            <span id="day">Sabtu</span>
-                            <span id="date">12-04-2023</span>
-                        </label>
-                    </li>
-
-                    <li class="schedule">
-                        <input id="schedule" type="radio" name="radio">
-                        <label class="details">
-                            <span id="type">Reguler</span>
-                            <span id="day">Sabtu</span>
-                            <span id="date">12-04-2023</span>
-                        </label>
-                    </li>
-            
-                    <li class="schedule">
-                        <input id="schedule" type="radio" name="radio">
-                        <label class="details">
-                            <span id="type">Reguler</span>
-                            <span id="day">Sabtu</span>
-                            <span id="date">12-04-2023</span>
-                        </label>
-                    </li>
-            
-                    <li class="schedule">
-                        <input id="schedule" type="radio" name="radio">
-                        <label class="details">
-                            <span id="type">Reguler</span>
-                            <span id="day">Sabtu</span>
-                            <span id="date">12-04-2023</span>
-                        </label>
-                    </li>
-
-                    </ul>
-                </section>
+            <section class="confirm" id="confirm">
             </section>
-
-            <section class="confirm">
-                <label class="confirm-detail">
-                    <select id="payment-method">
-                        <option value="method" disabled selected>Pilih Metode Pembayaran</option>
-                        <option value="qris">QRIS</option>
-                    </select>
-                    <br><span id="price">RP.83.500</span>
-                    <span>Include Tax*</span>
-                </label>
-                <button type="button"><a href="#">Konfirmasi</a></button>
-            </section>
-        </section>
+        </div>
     </main>
 </body>
+
 </html>

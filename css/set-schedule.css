@@ -1,251 +1,238 @@
-@import url("../css/style.css");
-
+@import url(style.css);
 body{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    padding: 17px 20px;
     display: flex;
     flex-direction: column;
     flex-grow: 1;
-    height: 100vh
+    align-items: center;
 }
 
-main{
+.main-wrap{
     display: flex;
     flex-direction: column;
-    align-items: center;
-}
-
-.main-container{
-    margin: 15px;
-    border-radius: 12px;
-}
-
-.card{
-    margin: 15px;
-    padding: 15px;
-    border-radius: 12px;
+    justify-content: space-between;
+    margin-top: 12px;
     max-width: 800px;
-    justify-content: center;  
-    border: 1px solid hsl(0 0% 83%); 
+    height: 100%;
+    flex-grow: 1;
 }
 
-.card-head{
+article {
+    background-color: var(--second-base);
+    border-radius: 20px;
+    padding: 18px 12px;
+    font-size: 12px;
+}
+
+figure {
+    width: 100%;
     display: flex;
     align-items: center;
 }
 
-.card-head figure img{
-    width: 100px;
-    border-radius: 12px;
+figure>img {
+    object-fit: cover;
+    max-width: 100px;
+    border-radius: 10px;
 }
 
-.card-head ul{
-    list-style: none;
-    margin-left: 15px;
+.profile-container {
+    margin-left: 8px;
+
 }
 
-.card-head ul li{
-    font-size: 14px;
-}
-
-.status{
+.status {
     display: flex;
     align-items: center;
-    
+    font-weight: 500;
 }
 
-.status #status-color{
-    height: 15px;
-    width: 15px;
-    background-color: green;
-    border-radius: 50%;
+.status-color {
+    height: 1em;
+    width: 1em;
+    border-radius: 20px;
+    margin-right: 4px;
 }
 
-.status #detail-status{
-    margin-left: 5px;
+.profile-container>h1 {
+    font-size: 18px;
 }
 
-.doctor-status #name{
-    font-size: 16px;
-    font-weight: bold;
+.info-doctor {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
 }
 
-.doctor-description{
+.card {
+    display: flex;
+    flex-direction: column;
     margin-top: 20px;
-    display: flex;
-    flex-direction: column;
-    list-style: none;
-    gap: 10px;
+    background-color: var(--second-base);
+    border-radius: 15px;
+    padding: 12px;
 }
 
-.experience ul{
-    list-style: disc;
-    list-style-position: inside;
+.work{
+    display: inline-block;
+    border-radius: 6px;
+    padding: 4px 10px;
+    margin-bottom:6px;
 }
 
-.doctor-description{
-    font-size: 14px;
+.card>hr{
+    margin-top:8px;
+}
+.card>a{
+    width: 100%;
+    margin-top: 12px;
 }
 
-.set-schedule{
-    max-width: 800px;
-    margin: 15px;
-    padding: 15px;
-    border-radius: 12px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: auto;
-    height: auto;
-    border: 1px solid hsl(0 0% 83%); 
+.btn-in{
+    cursor: pointer;
+    padding: 8px 0;
+    border: none;
+    border-radius: 10px;
+    background-color: var(--brand-color);
+    color: var(--main-base);
+    font-weight: 600;
+    width: 100%;
 }
 
 .available-schedule {
-    display: flex;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  max-width: 800px;
+  width: auto;
+  margin-top: 10px;
+}
+
+.tile-group {
+  display: flex;
+  justify-content: left;
+  gap: 15px;
+}
+
+.schedule {
+  display: flex;
+  justify-content: left;
+  position: relative;
+  margin: auto;
+  border: solid 2px;
+  border-radius: 12px;
+}
+
+.schedule input {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  cursor: pointer;
+  opacity: 0;
+}
+
+.schedule .details{
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+}
+
+.schedule span {
+  color: var(--primary-color);
+  font-size: 10px;
+}
+
+input:checked+ .details{
+  transition: 0.2s;
+  background: var(--brand-color);
+  color: var(--main-base);
+  border-radius: 10px;
+}
+
+.confirm{
+  background: var(--second-base);
+  border-radius: 12px;
+  margin-top: 20px;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.confirm-detail{
+  display: flex;
+  flex-direction: column;
+}
+
+.confirm button{
+  background: var(--brand-color);
+  border: none;
+  border-radius: 12px;
+  padding: 0px 10px;
+  height: auto;
+}
+
+.confirm button a{
+  text-decoration: none;
+  color: var(--main-base);
+  display: block;
+  font-weight: bold;
+}
+
+.confirm-detail #price{
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.confirm-detail span{
+  font-size: 12px;
+}
+
+#payment-method{
+  width: auto;
+  border-radius: 10px;
+}
+
+
+/* desktop view */
+@media (min-width: 670px){
+  .card{
     align-items: center;
-    justify-content: left;
-    max-width: 800px;
-    width: auto;
-    margin-top: 10px;
-  }
-  
-  .tile-group {
-    display: flex;
-    justify-content: left;
-    gap: 15px;
-  }
-  
-  .schedule {
-    display: flex;
-    justify-content: left;
-    position: relative;
-    margin: auto;
-    border: solid 2px;
-    border-radius: 12px;
-  }
-  
-  .schedule input {
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    margin: 0;
-    cursor: pointer;
-    opacity: 0;
-  }
-  
-  .schedule .details{
-    display: flex;
-    flex-direction: column;
-    padding: 5px;
-  }
-
-  .schedule span {
-    color: var(--primary-color);
-    font-size: 10px;
-  }
-
-  input:checked+ .details{
-    transition: 0.2s;
-    background: var(--brand-color);
-    color: var(--main-base);
-    border-radius: 10px;
   }
 
   .confirm{
-    border: 1px solid hsl(0 0% 83%); 
-    border-radius: 12px;
-    margin: 15px;
-    padding: 15px;
-    display: flex;
-    justify-content: space-between;
-  }
-
-  .confirm-detail{
     display: flex;
     flex-direction: column;
-  }
+    justify-content: center;
 
-  .confirm button{
-    background: var(--brand-color);
-    border: none;
-    border-radius: 12px;
-    padding: 0px 10px;
+}
+
+#payment-method{
+    font-size: 18px;
+}
+
+.confirm-detail #price{
+    font-size: 18px;
+}
+
+.confirm-detail span{
+    font-size: 14px;
+}
+
+.confirm button{
+    padding: 3px 3px;
     height: auto;
   }
 
   .confirm button a{
-    text-decoration: none;
-    color: var(--main-base);
-    display: block;
-    font-weight: bold;
-  }
-
-  .confirm-detail #price{
     font-size: 18px;
-    font-weight: bold;
   }
 
-  .confirm-detail span{
-    font-size: 12px;
-  }
-
-  #payment-method{
-    width: auto;
-    border-radius: 10px;
-  }
-
-@media(min-width: 670px){
-    
-    .main-container{
-        margin: 30px;
-        padding: 30px;
-    }
-
-    .card-head ul li{
-        font-size: 18px;
-    }
-
-    .doctor-status #name{
-        font-size: 22px;
-        font-weight: bold;
-    }
-
-    .doctor-description{
-        font-size: 18px;
-    }
-
-    .set-schedule{
-        margin: 15px;
-        padding: 15px;
-    }
-
-    .schedule span {
-        font-size: 16px;
-      }
-
-    .confirm{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        gap: 20px;
-    }
-
-    #payment-method{
-        font-size: 18px;
-    }
-
-    .confirm-detail #price{
-        font-size: 18px;
-    }
-
-    .confirm-detail span{
-        font-size: 14px;
-    }
-
-    .confirm button{
-        padding: 10px 10px;
-        height: auto;
-      }
-    
-      .confirm button a{
-        font-size: 18px;
-      }
 }

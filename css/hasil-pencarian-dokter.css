@@ -62,6 +62,7 @@
     width: 170px;
     position: relative;
     right: 20px;
+    cursor: pointer;
 }
 .status-dctr {
   display: flex;
@@ -152,6 +153,7 @@
   width: 170px;
   position: relative;
   left: 25px;
+  cursor: pointer;
 }
 .status-dctr2 {
     display: flex;
@@ -188,4 +190,40 @@
  font: "Poppins", sans-serif;
 }
 
+@media screen and (min-width: 670px) {
+    body {
+        display: flex;
+
+    }
+    main {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+    }
+    .dokter1 { 
+        display: flex;
+        width: 50%;
+    }
+    .dokter2 {
+        display: flex;
+        width: 50%;
+    }
+    .card1 {
+        display: flex;
+        width: 90%;
+    }
+    .card2 {
+        display: flex;
+        width: 90%;
+    }
+    .profil-dctr1 {
+        align-items: center;
+     }
+     .profil-dctr2 {
+        align-items: center;
+     }
+    
+
+}
 

@@ -38,7 +38,7 @@ function Login() {
           alert("Login Berhasil!");
           setLoginStatus(true);
           setTimeout(function () {
-            window.location.replace("page.index.html");
+            window.location.replace("page/index.html");
           }, 2000);
         }
       }

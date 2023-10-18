@@ -1,0 +1,230 @@
+@import "style.css";
+
+.back-button {
+    margin-top: 30px;
+    font-weight: 700px;
+    margin-left: 20px;
+    align-self: flex-start;
+}
+.dokter1 * {
+    box-sizing: border-box;
+    align-items: center;
+}
+.dokter1 {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+    justify-self: flex-start;
+    flex-shrink: 0;
+    position: relative;
+}
+.card1 * {
+    box-sizing: content-box;
+   
+}
+.card1 {
+  background: var(--second-base, #f1f5f8);
+  border-radius: 10px;
+  width: 360px;
+  height: 160px;
+  position: absolute;
+  left: 25px;
+  top: 30px;
+}
+.card1:hover {
+ border-right: 5px solid var(--not-available);
+ border-bottom: 5px solid var(--not-available);
+ /*scale: 1.03; */
+}
+.fpdokter {
+    box-sizing: border-box;
+}
+.fpdokter img {
+  border-radius: 10px;
+  display: flex;
+  flex-direction: row;
+  gap: 0px;
+  align-items: center;
+  justify-content: center;
+  width: 130px;
+  height: 130px;
+  position: relative;
+  top: 45px;
+  left: 35px;
+}
+.dctr-information{
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    align-items: flex-start;
+    justify-content: center;
+    width: 170px;
+    position: relative;
+    right: 20px;
+    top: 10px;
+    cursor: pointer;
+}
+.status-dctr {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  position: relative;
+  bottom: 100px;
+  left:200px;
+}
+.round {
+  background: var(--succes, #30ba00);
+  border-radius: 10px;
+  flex-shrink: 0;
+  width: 11px;
+  height: 11px;
+  top: 1px;
+  right: 2px;
+  position: relative;
+}
+.status-dctr a{
+    font-size: 13px;
+    font: "Poppins", sans-serif;
+}
+.profil-dctr {
+    text-align: left;
+    position: relative;
+    left: 200px;
+    bottom: 90px;
+}
+.profil-dctr h4 {
+ font: "Poppins", sans-serif;
+}
+.dokter2 * {
+    box-sizing: border-box;
+}
+.dokter2 {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+    justify-self: flex-start;
+    flex-shrink: 0;
+    position: relative;
+    bottom: 60px;
+}
+.card2 * {
+    box-sizing: content-box;
+}
+.card2 {
+    background: var(--second-base, #f1f5f8);
+    border-radius: 10px;
+    width: 360px;
+    height: 160px;
+    position: absolute;
+    left: 25px;
+    top: 30px;
+}
+.card2:hover {
+    border-right: 5px solid var(--not-available);
+    border-bottom: 5px solid var(--not-available);
+    /*scale: 1.03; */
+ }
+.fpdokter2 {
+    box-sizing: border-box;
+}
+.fpdokter2 img {
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    gap: 0px;
+    align-items: center;
+    justify-content: center;
+    width: 130px;
+    height: 130px;
+    position: relative;
+    top: 45px;
+    left: 35px;
+  }
+  .dctr-information2{
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  align-items: flex-start;
+  justify-content: center;
+  width: 170px;
+  position: relative;
+  left: 25px;
+  top: 10px;
+  cursor: pointer;
+}
+.status-dctr2 {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    justify-content: flex-start;
+    flex-shrink: 0;
+    position: relative;
+    bottom: 100px;
+    left:   160px;
+  }
+  .round2 {
+    background: var(--danger, #740a0a);
+    border-radius: 10px;
+    flex-shrink: 0;
+    width: 11px;
+    height: 11px;
+    top: 1px;
+    right: 2px;
+    position: relative;
+  }
+  .status-dctr2 a{
+    font-size: 13px;
+    font: "Poppins", sans-serif;
+}
+.profil-dctr2 {
+    text-align: left;
+    position: relative;
+    left: 150px;
+    bottom: 90px;
+}
+.profil-dctr2 h4 {
+ font: "Poppins", sans-serif;
+}
+
+@media screen and (min-width: 670px) {
+    body {
+        display: flex;
+
+    }
+    main {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+        margin: 55px -1px;
+    }
+    .dokter1 { 
+        display: flex;
+        width: 50%;
+    }
+    .dokter2 {
+        display: flex;
+        width: 50%;
+    }
+    .card1 {
+        display: flex;
+        width: 90%;
+    }
+    .card2 {
+        display: flex;
+        width: 90%;
+    }
+    .profil-dctr1 {
+        align-items: center;
+     }
+     .profil-dctr2 {
+        align-items: center;
+     }
+}
+

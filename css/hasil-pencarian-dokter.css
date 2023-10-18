@@ -27,7 +27,7 @@
   background: var(--second-base, #f1f5f8);
   border-radius: 10px;
   width: 360px;
-  height: 150px;
+  height: 160px;
   position: absolute;
   left: 25px;
   top: 30px;
@@ -50,7 +50,7 @@
   width: 130px;
   height: 130px;
   position: relative;
-  top: 37px;
+  top: 45px;
   left: 35px;
 }
 .dctr-information{
@@ -62,6 +62,7 @@
     width: 170px;
     position: relative;
     right: 20px;
+    top: 10px;
     cursor: pointer;
 }
 .status-dctr {
@@ -118,7 +119,7 @@
     background: var(--second-base, #f1f5f8);
     border-radius: 10px;
     width: 360px;
-    height: 150px;
+    height: 160px;
     position: absolute;
     left: 25px;
     top: 30px;
@@ -141,7 +142,7 @@
     width: 130px;
     height: 130px;
     position: relative;
-    top: 37px;
+    top: 45px;
     left: 35px;
   }
   .dctr-information2{
@@ -153,6 +154,7 @@
   width: 170px;
   position: relative;
   left: 25px;
+  top: 10px;
   cursor: pointer;
 }
 .status-dctr2 {
@@ -200,6 +202,7 @@
         flex-direction: column;
         width: 100%;
         align-items: center;
+        margin: 55px -1px;
     }
     .dokter1 { 
         display: flex;

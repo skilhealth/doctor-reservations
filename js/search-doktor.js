@@ -57,7 +57,13 @@ function findElementsWithCount(array, targetCount) {
     const elementsWithTargetCount = Object.keys(frequencyCounter).filter(element => frequencyCounter[element] === targetCount);
     return elementsWithTargetCount;
 }
-
+function cekLogin(){
+    if (sessionStorage.getItem("loginState") == 1) {
+        window.location.href = "hasil-pencarian-dokter.html"
+    } else {
+        window.location.href = "login.html"
+    }
+}
 async function getData() {
     try {
         let result = await fetch('https://6525187f67cfb1e59ce69680.mockapi.io/doctor')
@@ -95,12 +101,14 @@ getData().then(result => {
     hospitalOptions(result)
     specialistOptions(result)
 })
-console.log(form)
+
 form.addEventListener('submit', (event) => {
     event.preventDefault()
     getData().then(result => {
         let data = cariDokter(result, cariValue.value, dayValue.value, hospitalValue.value, specialistValue.value, metodeValue.value)
         let hasil = findElementsWithCount(data.doktorid, data.get)
         sessionStorage.setItem("listdokter",JSON.stringify(hasil))
+        cekLogin()
     })
+    .catch(err => console.err("failed fetch : ",err) )
 })

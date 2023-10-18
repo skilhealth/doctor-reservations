@@ -95,7 +95,7 @@ getData().then(result => {
     hospitalOptions(result)
     specialistOptions(result)
 })
-
+console.log(form)
 form.addEventListener('submit', (event) => {
     event.preventDefault()
     getData().then(result => {

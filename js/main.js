@@ -8,8 +8,8 @@ function navbar(state) {
     }
     else {
         return `
-            <li><a href="page/login.html">Login</a></li>
-            <li><a href="page/register.html">Register</a></li>
+            <li><a href="../page/login.html">Login</a></li>
+            <li><a href="../page/register.html">Register</a></li>
         `
     }
 }

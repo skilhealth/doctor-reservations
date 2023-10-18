@@ -200,11 +200,34 @@ input:checked+ .details{
   border-radius: 10px;
 }
 
+.confirm button{
+  color: var(--main-base);
+  font-weight: bold;
+}
+
 
 /* desktop view */
 @media (min-width: 670px){
+
+  article h3, article p, article li{
+    font-size: 16px;
+  }
+
   .card{
     align-items: center;
+  }
+
+  .set-schedule{
+    margin: 15px;
+    padding: 15px;
+}
+
+  .info-schedule h1{
+    text-align: center;
+  }
+
+.schedule span {
+    font-size: 16px;
   }
 
   .confirm{

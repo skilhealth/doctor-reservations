@@ -47,15 +47,13 @@ async function getDataDoctor(index, day) {
         })
 
         let scheduleList = doctor.schedule.map(item => {
-            let daydate = item.day + "<br>" + item.date;
-            let schedulework = item.work;
-            
             return `
                 <li class="schedule">
                     <input id="schedule" type="radio" name="radio">
                     <label class="details">
-                        <span id="type">${schedulework}</span>
-                        <span id="day">${daydate}</span>
+                        <span id="type">${item.work}</span>
+                        <span id="day">${item.day}</span>
+                        <span id="date">${item.date}</span>
                     </label>
                 </li>
             `
@@ -73,6 +71,51 @@ async function getDataDoctor(index, day) {
         
         cardStatus.innerHTML = carddata
 
+        function handleRadioButtonChange(clickedRadioButton) {
+            let dayValue = clickedRadioButton.nextElementSibling.querySelector("#day").textContent;
+            let dateValue = clickedRadioButton.nextElementSibling.querySelector("#date").textContent;
+            console.log(dayValue)
+            const newQueueItem = {
+                queue_number: 3,
+                token: "GA753Z",
+                patient_name: "jake"
+            };
+        
+            fetch('https://6525187f67cfb1e59ce69680.mockapi.io/doctor/schedule', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    day: dayValue,
+                    date: dateValue,
+                    queue: [newQueueItem]
+                })
+            })
+            .then(response => {
+                if (response.ok) {
+                    console.log('Data berhasil dipost ke API.');
+                } else {
+                    console.error('Gagal mempost data ke API.');
+                }
+            })
+            .catch(error => {
+                console.error('Terjadi kesalahan: ' + error);
+            });
+        }
+        
+        // Mengubah event listener Anda
+        function addRadioButtonListeners() {
+            let radioButtons = document.querySelectorAll('input[type="radio"][name="radio"]');
+            radioButtons.forEach(function (radioButton) {
+                radioButton.addEventListener('change', function (event) {
+                    if (event.target.checked) {
+                        handleRadioButtonChange(radioButton); // Mengirim tombol yang diklik sebagai argumen
+                    }
+                });
+            });
+        }
+
         let payment = `
             <label class="confirm-detail">
                     <select id="payment-method">
@@ -82,8 +125,7 @@ async function getDataDoctor(index, day) {
                     <br><span id="price">RP.83.500</span>
                     <span>Include Tax*</span>
             </label>
-            <button type="button"><a href="#">Konfirmasi</a></button>`
-        
+            <button type="button" onclick=${addRadioButtonListeners()}>Konfirmasi</button>`
         confirm.innerHTML = payment
         
     }

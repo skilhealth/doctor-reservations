@@ -35,11 +35,8 @@ function Login() {
           return alert("Email atau Password Salah!");
         } else {
           sessionStorage.setItem("userData", JSON.stringify(user));
-          alert("Login Berhasil!");
-          setLoginStatus(true);
-          setTimeout(function () {
-            window.location.replace("page/index.html");
-          }, 2000);
+          setLoginStatus(1);
+          window.location.replace("../index.html");
         }
       }
     })
@@ -50,7 +47,7 @@ function Login() {
 }
 
 function setLoginStatus(isLoggedIn) {
-  sessionStorage.setItem("isLoggedIn", isLoggedIn.toString());
+  sessionStorage.setItem("loginState", isLoggedIn.toString());
 }
 
 // function func() {

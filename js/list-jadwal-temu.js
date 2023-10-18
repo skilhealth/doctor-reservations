@@ -1,5 +1,6 @@
 const getToken = sessionStorage.getItem("token")
 let myToken = JSON.parse(getToken)
+// myToken = ["GH651H","GY655H"]
 
 function getbadge(work) {
     if (work == "Regular") {
@@ -38,6 +39,9 @@ async function getDoctorData() {
     try {
         let result = await fetch("https://6525187f67cfb1e59ce69680.mockapi.io/doctor")
         let doctors = await result.json()
+        if(!myToken){
+            return warp.innerHTML = "<h3>Data Tidak ada</h3>"
+        }
         myToken.forEach(function (token) {
             var doctorData = findDoctor(token, doctors);
             if (doctorData) {
@@ -68,11 +72,9 @@ async function getDoctorData() {
                 })
                 profileCard.innerHTML = carddata
                 warp.appendChild(profileCard)
-                // warp.insertAdjacentHTML('beforeend', );
             }
+            
         })
-
-
     }
     catch (err) {
         console.log(err)

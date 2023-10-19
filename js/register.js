@@ -74,7 +74,7 @@ function submitData() {
     .then(() => {
       alert("Pendaftaran Akun Berhasil!");
       setTimeout(function () {
-        window.location.replace("page/landing-page.html");
+        window.location.href = "../index.html";
       }, 2000);
       setLoginStatus(true);
     })

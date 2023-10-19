@@ -2,11 +2,12 @@ let cardStatus = document.getElementById("card")
 let profile = document.getElementById("profile")
 let infoDoctor = document.getElementsByClassName("info-doctor")
 let confirm = document.getElementById("confirm")
+let formbox = document.getElementById("submit-data")
 const getDetail = sessionStorage.getItem('detail')
 const parsedetail = JSON.parse(getDetail)
+const parseakun = JSON.parse(sessionStorage.getItem("userData"))
 
-
-async function getDataDoctor(index, day) {
+async function getDataDoctor(index) {
     try {
         let respons = await fetch(`https://6525187f67cfb1e59ce69680.mockapi.io/doctor/${index}`);
         let doctor = await respons.json()
@@ -68,53 +69,37 @@ async function getDataDoctor(index, day) {
                     </ul>
                 </section>
             </div>`
-        
+
         cardStatus.innerHTML = carddata
 
         function handleRadioButtonChange(clickedRadioButton) {
             let dayValue = clickedRadioButton.nextElementSibling.querySelector("#day").textContent;
             let dateValue = clickedRadioButton.nextElementSibling.querySelector("#date").textContent;
-            console.log(dayValue)
-            const newQueueItem = {
-                queue_number: 3,
-                token: "GA753Z",
-                patient_name: "jake"
-            };
-        
-            fetch('https://6525187f67cfb1e59ce69680.mockapi.io/doctor/schedule', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify({
-                    day: dayValue,
-                    date: dateValue,
-                    queue: [newQueueItem]
-                })
-            })
-            .then(response => {
-                if (response.ok) {
-                    console.log('Data berhasil dipost ke API.');
-                } else {
-                    console.error('Gagal mempost data ke API.');
-                }
-            })
-            .catch(error => {
-                console.error('Terjadi kesalahan: ' + error);
-            });
+            return dayValue
         }
-        
+
+        function generateToken(length) {
+            var charset = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+            var resultToken = '';
+
+            for (var i = 0; i < length; i++) {
+                // Memilih karakter acak dari charset
+                var randomIndex = Math.floor(Math.random() * charset.length);
+                resultToken += charset.charAt(randomIndex);
+            }
+            return resultToken;
+        }
+
         // Mengubah event listener Anda
-        function addRadioButtonListeners() {
-            let radioButtons = document.querySelectorAll('input[type="radio"][name="radio"]');
-            radioButtons.forEach(function (radioButton) {
-                radioButton.addEventListener('change', function (event) {
-                    if (event.target.checked) {
-                        handleRadioButtonChange(radioButton); // Mengirim tombol yang diklik sebagai argumen
-                    }
-                });
+        let dataSelect
+        let radioButtons = document.querySelectorAll('input[type="radio"][name="radio"]');
+        radioButtons.forEach(function (radioButton) {
+            radioButton.addEventListener('change', function (event) {
+                if (event.target.checked) {
+                    dataSelect = handleRadioButtonChange(radioButton); // Mengirim tombol yang diklik sebagai argumen
+                }
             });
-        }
+        });
 
         let payment = `
             <label class="confirm-detail">
@@ -125,13 +110,42 @@ async function getDataDoctor(index, day) {
                     <br><span id="price">RP.83.500</span>
                     <span>Include Tax*</span>
             </label>
-            <button type="button" onclick=${addRadioButtonListeners()}>Konfirmasi</button>`
+            <button type="submit">Konfirmasi</button>`
         confirm.innerHTML = payment
-        
+        formbox.addEventListener('submit', (event) => {
+            event.preventDefault()
+            const dataDay = doctor.schedule.find(schedule => schedule.day === dataSelect)
+            let NewQueueData = {
+                queue_number: dataDay.queue.length + 1,
+                token: generateToken(6),
+                patient_name: parseakun[0].name
+            }
+            if (dataDay) {
+                dataDay.queue.push(NewQueueData)
+                fetch(`https://6525187f67cfb1e59ce69680.mockapi.io/doctor/${index}`, {
+                    method: "PUT",
+                    headers: {
+                        "Content-Type": "application/json",
+                    },
+                    body: JSON.stringify(doctor),
+                }).then((res) => {
+                    console.log(res);
+                    let myToken = sessionStorage.getItem('MyToken')
+                    let arraykosong = JSON.parse(myToken) || []
+                    arraykosong.push(NewQueueData.token)
+                    sessionStorage.setItem("MyToken", JSON.stringify(arraykosong))
+                    window.location.href = "list-jadwal-temu.html"
+                }).catch((err) => {
+                    console.error("Gagal push : ", err)
+                })
+
+
+            }
+        })
     }
     catch (err) {
         console.log(err)
     }
 
 }
-getDataDoctor(0,"Minggu")
+getDataDoctor(parsedetail.doctorId)

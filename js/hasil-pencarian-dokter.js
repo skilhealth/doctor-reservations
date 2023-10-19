@@ -48,7 +48,7 @@ async function getDoctorData() {
                                 doctorId : doctor.id,
                             }
                             sessionStorage.setItem('detail',JSON.stringify(detail))
-                            window.location = "../page/schecule-info-after-booking.html"
+                            window.location = "../page/set-schedule.html"
                         })
                     profileCard.innerHTML = dataProfile
                     mainWrap.appendChild(profileCard)

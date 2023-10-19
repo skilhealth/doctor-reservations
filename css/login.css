@@ -1,0 +1,109 @@
+@import "style.css";
+
+main{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+    max-width: 400px;
+    width: 100%;
+}
+
+.logo-title {
+    text-align: center;
+}
+
+.logo-title p {
+    font-weight: bold;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.logo-title img {
+    display: flex;
+    position: relative;
+    width: 165px;
+    height: 165px;
+    align-items: center;
+    bottom: -30px;
+}
+.form-container{
+    width:100%;
+}
+
+.form-container h3 {
+    padding: 10px;
+}
+
+.form-container input {
+    height: 50px;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.form-container form {
+    margin-top: 50px;
+    border-radius: 30px;
+    padding: 20px 0px;
+    background-color: #FFFF;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-container .main-button {
+    padding: 15px 15px;
+    font-weight: 500;
+    color: #fff;
+    background: var(--brand-color);
+    cursor: pointer;
+    border-radius: 0.5rem;
+    margin-top: 20px;
+    border: none;
+}
+
+.form-container .main-button:hover {
+    transition: 0.3s;
+    opacity: 0.6;
+}
+
+@media screen and (min-width: 670px) {
+    .back-button {
+        display: none;
+    }
+
+    body {
+        justify-content: center;
+        align-items: center;
+        display: flex;
+    }
+
+    .main {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .logo-title {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 7px;
+        font-size: 24px;
+    }
+
+    .form-container {
+        width: 100%;
+    }
+
+    .form-login input {
+        display: flex;
+        align-items: center;
+        width: 100%;
+    }
+
+}

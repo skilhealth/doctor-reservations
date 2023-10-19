@@ -1,0 +1,103 @@
+@import "style.css";
+
+.back-button {
+    margin-top: 30px;
+    font-weight: 700px;
+    margin-left: 20px;
+    align-self: flex-start;
+}
+
+.card{
+    font-weight: 500;
+    background-color: var(--second-base);
+    border-radius: 10px;
+    padding: 12px 15px;
+    margin-top: 10px;
+    font-size: 12px;
+
+    max-width: 800px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    box-sizing: content-box;
+}
+.card:hover{
+    border-right:5px solid var(--not-available);
+    border-bottom: 5px solid var(--not-available);
+    scale: 1.001;
+    transition: 0.3s;
+    
+}
+
+.card>img {
+    object-fit: cover;
+    max-width: 95px;
+    border-radius: 10px;
+}
+
+.profile-container {
+    margin-left: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5px;
+
+}
+
+.status {
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+
+}
+.badge{
+    display: inline-block;
+    border-radius: 6px;
+    padding: 4px 10px;
+    font-size: 10px;
+    margin-right: 5px;
+}
+
+h3{
+    font-size: 16px;
+}
+
+.status-color {
+    height: 1em;
+    width: 1em;
+    border-radius: 20px;
+    margin-right: 4px;
+}
+.judul{
+    display: none;
+}
+@media screen and (min-width: 670px) {
+    .judul{
+        display: flex;
+    }
+    body {
+        display: flex;
+
+    }
+
+    main {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+        margin: 55px -1px;
+    }
+
+    .dokter {
+        display: flex;
+        width: 50%;
+    }
+
+    .card {
+        display: flex;
+        width: 90%;
+    }
+
+    .profil-dctr {
+        align-items: center;
+    }
+}

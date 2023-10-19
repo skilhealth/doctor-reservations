@@ -1,0 +1,96 @@
+@import "style.css";
+
+body{
+    width: 100%;
+    padding: 0 20px;
+}
+main {
+    margin-top: 20px;
+    width: 100%;
+    max-width: 550px;
+
+}
+.logo{
+    width: min-content;
+}
+.logo img{
+    width: 64px;
+    height: 68px;
+}
+.main-container{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.title{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.title p {
+  text-align: center;
+  font-weight: bold;
+  font-family: 'Open Sans', sans-serif;
+}
+.form-container{
+    width: 100%;
+}
+
+.form-container form{
+    border-radius: 30px;
+    padding:20px 20px;
+    background-color: #FFFF;
+    display: flex;
+    flex-direction: column;
+    
+}
+.form-container input {
+    height: 50px;
+    border-radius: 10px;
+    padding: 10px;
+}
+.form-container select {
+    height: 50px;
+    border-radius: 10px;
+    padding: 10px;
+}
+.form-container h3{
+    padding: 5px;
+ }
+ .form-container .regis-button {
+    padding: 10px 10px;
+    font-weight: 500;
+    color: #fff;
+    background: var(--brand-color);
+    cursor: pointer;
+    border-radius: 0.5rem;
+    margin-top: 20px;
+}
+.form-container .regis-button :hover {
+    transition: 0.3s;
+    opacity: 0.6;
+}
+.remember-link {
+    text-align: end;
+}
+
+@media screen and (min-width: 620px) {
+    body {
+        align-items: center;
+        display: flex;
+    }
+    main {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+        padding: 10px;
+    }
+    .title {
+        margin: 20px;
+    }
+    .form-container a {
+        text-align: right;
+    }
+}

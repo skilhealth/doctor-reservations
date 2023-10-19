@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/c5b31b49c9.js" crossorigin="anonymous"></script>
+    <link rel="shortcut icon" href="../assets/LogoSkillHealth.png">
+    <link rel="stylesheet" href="../css/pembayaran.css">
+    <script src="../js/main.js" defer></script>
+    <title>Pembayaran - Skilhealth</title>
+</head>
+<body>
+    <nav class="header">
+        <label class="expand">
+            <img src="../assets/LogoSkillHealth.png" class="logo">
+            <h1>Skilhealth</h1>
+        </label>
+        <section class="nav">
+            <input type="checkbox" id="check">
+            <label for="check" class="check-btn">
+                <i class="fas fa-bars"></i>
+            </label>
+            <ul class="nav-content">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../page/search-doctor.html">Cari Dokter</a></li>
+            </ul>
+        </section>
+    </nav>
+    <label class="back-button">
+        <a href="set-schedule.html"><i class="fa-solid fa-arrow-left"></i></a>
+        <span>Pembayaran</span>
+    </label>
+    <main class="main-container">
+        <label class="qr-container">
+            <img src="../assets/qr-code.png">
+        </label>
+       
+        
+        <section class="payment-details">
+            <ul class="payment-description">
+                <li class="method">
+                    <span>Metode Pembayaran</span><br>
+                    <span id="method">QRIS</span>
+                </li>
+                <li class="payment-code">
+                    <span>Kode Pembayaran</span><br>
+                    <span id="payment-code"></span>
+                </li>
+                <li class="price">
+                    <span>Total Pembayaran</span><br>
+                    <span id="price">RP.83.500</span>
+                </li>
+            </ul>
+        </section>
+        
+        <button type="button"><a href="list-jadwal-temu.html">Cek Jadwal</a></button>
+        
+    </main>
+        
+    
+    
+<script src="../js/pembayaran.js"></script>
+</body>
+</html>

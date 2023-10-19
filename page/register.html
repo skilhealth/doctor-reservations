@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - Skilhealth</title>
+    <link rel="stylesheet" href="../css/register.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="shortcut icon" href="../assets/LogoSkillHealth.png">
+    <script src="../js/register.js" defer></script>
+    <script src="https://kit.fontawesome.com/c5b31b49c9.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <main>
+        <section class="main-container">
+            <div class="back-button">
+                <a href="../index.html"><i class="fa-solid fa-arrow-left"></i></a>
+            </div>
+            <div class="title">
+                <p>Selamat Datang di</p>
+                <p> SkilHealth!</p>
+                <div class="logo">
+                    <img src="/assets/LogoSkillHealth.png">
+                </div>
+            </div>
+        </section>
+
+        <section class="form-container" id="register-form">
+            <form id="form-register" autocomplete="off">
+                <h3>Nama</h3>
+                <input id="nama" name="nama" type="text" placeholder="Masukan Nama" autofocus required>
+                <h3>Tanggal Lahir</h3>
+                <input id="tanggal" name="tanggal" type="date" placeholder=" Masukan tanggal lahir" required>
+                <h3>Jenis Kelamin</h3>
+                <select class="" id="jenis_kelamin" name="jenis_kelamin" required>
+                    <option value="Laki-laki">Laki-Laki</option>
+                    <option value="perempuan">Perempuan</option>
+                </select>
+                <h3>No.Telepon</h3>
+                <input id="telepon" name="telepon" type="text" placeholder="Masukan No.Telepon" required>
+                <h3>Email</h3>
+                <input id="email" type="email" placeholder="Masukan Email" required>
+                <h3>Password</h3>
+                <input id="password" type="password" placeholder="Masukan Password" required>
+                <h3>Konfirmasi Password</h3>
+                <input id="konfirmasi_password" type="password" placeholder="Konfirmasi Password" required>
+                <button class="regis-button" type="button" onclick="submitData()" id="register-form">Register</button>
+                <a href="../page/login.html" class="remember-link">Sudah punya akun?</a>
+            </form>
+        </section>
+    </main>
+</body>
+
+</html>

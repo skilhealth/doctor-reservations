@@ -3,7 +3,7 @@ const navWrap = document.getElementsByClassName("nav-content")
 function navbar(state) {
     if (state == 1) {
         return `
-            <li><a href="index.html" onclick="(sessionStorage.setItem('loginState',JSON.stringify(0)))">Logout</a></li>
+            <li><a href="../index.html" onclick="(sessionStorage.setItem('loginState',JSON.stringify(0)))">Logout</a></li>
         `
     }
     else {

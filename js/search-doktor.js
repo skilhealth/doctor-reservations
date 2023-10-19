@@ -21,7 +21,6 @@ function cariDokter(doctors, name, day, hospital, specialist, metode) {
             if (fullName.includes(name)) {
                 doktorid.push(element.id)
                 count1 = 1;
-                console.log("test")
             }
 
         }
@@ -34,18 +33,27 @@ function cariDokter(doctors, name, day, hospital, specialist, metode) {
             count3 = 1;
         }
         if (element.schedule.some(schedule => schedule.day === day)) {
-            doktorid.push(element.id)
-            count4 = 1;
-        }
-        if (element.schedule.some(schedule => schedule.work === metode)) {
-            doktorid.push(element.id)
-            count5 = 1;
+            if (!metode) {
+                doktorid.push(element.id)
+                count4 = 1;
+            }
+            element.schedule.map((item) => {
+                if (item.day === day && item.work === metode) {
+                    doktorid.push(element.id)
+                    doktorid.push(element.id)
+                    count5 = 2;
+                }
+            })
         }
     });
     found = count1 + count2 + count3 + count4 + count5
-    return {
-        doktorid: doktorid,
-        get: found
+    if(found===0){
+        alert("Data Tidak Ditemukan")
+    }else{
+        return {
+            doktorid: doktorid,
+            get: found
+        }
     }
 }
 function findElementsWithCount(array, targetCount) {
@@ -57,7 +65,7 @@ function findElementsWithCount(array, targetCount) {
     const elementsWithTargetCount = Object.keys(frequencyCounter).filter(element => frequencyCounter[element] === targetCount);
     return elementsWithTargetCount;
 }
-function cekLogin(){
+function cekLogin() {
     if (sessionStorage.getItem("loginState") == 1) {
         window.location.href = "hasil-pencarian-dokter.html"
     } else {
@@ -107,8 +115,8 @@ form.addEventListener('submit', (event) => {
     getData().then(result => {
         let data = cariDokter(result, cariValue.value, dayValue.value, hospitalValue.value, specialistValue.value, metodeValue.value)
         let hasil = findElementsWithCount(data.doktorid, data.get)
-        sessionStorage.setItem("listdokter",JSON.stringify(hasil))
+        sessionStorage.setItem("listdokter", JSON.stringify(hasil))
         cekLogin()
     })
-    .catch(err => console.err("failed fetch : ",err) )
+        .catch(err => console.err("failed fetch : ", err))
 })

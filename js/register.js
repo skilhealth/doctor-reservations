@@ -59,11 +59,10 @@ function submitData() {
     KonfirmasPassword: konfirmasi_password,
   };
 
-  //   SENDING DATA
   fetch("https://652c1049d0d1df5273ef1aa4.mockapi.io/registeruser", {
     method: "POST",
     headers: { "content-type": "application/json" },
-    // Send your data in the request body as JSON
+
     body: JSON.stringify(setData),
   })
     .then((res) => {

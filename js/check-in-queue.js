@@ -1,4 +1,4 @@
-// inget untuk selalu ganti tokennya atau nanti lewat cookie
+
 let card = document.getElementsByClassName("card")
 let figure = document.getElementsByTagName("figure")
 let section = document.getElementById("queue-data")

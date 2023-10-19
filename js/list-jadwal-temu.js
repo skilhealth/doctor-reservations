@@ -1,6 +1,5 @@
 const getToken = sessionStorage.getItem("MyToken")
 let myToken = JSON.parse(getToken)
-// myToken = ["JI2BU9"]
 console.log(myToken)
 
 function getbadge(work) {

@@ -7,9 +7,6 @@ function generateRandomToken(length) {
     }
     return token;
 }
-
-// Get the element with id "payment-code"
 const paymentCodeSpan = document.getElementById("payment-code");
 
-// Generate a random 6-character token and set it as the content of the span
 paymentCodeSpan.textContent = generateRandomToken(6);

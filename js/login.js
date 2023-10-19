@@ -12,11 +12,10 @@ function Login() {
     return false;
   }
 
-  // FETCH DATA
   const url = new URL(
     "https://652c1049d0d1df5273ef1aa4.mockapi.io/registeruser"
   );
-  url.searchParams.append("Email", email); //https://PROJECT_TOKEN.mockapi.io/tasks?completed=false
+  url.searchParams.append("Email", email); 
 
   fetch(url, {
     method: "GET",

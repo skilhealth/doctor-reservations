@@ -3,7 +3,6 @@ let myId = JSON.parse(getId)
 console.log(myId)
 let mainWrap = document.getElementById("wrapper")
 console.log(mainWrap)
-// myToken = ["GH651H","GY655H"]
 
 function getbadge(work) {
     if (work == "Regular") {
@@ -19,7 +18,7 @@ async function getDoctorData() {
     try {
         let result = await fetch("https://6525187f67cfb1e59ce69680.mockapi.io/doctor")
         let doctors = await result.json()
-        // console.log(doctors)
+       
         myId.map((item) => {
             doctors.map((doctor) => {
                 const profileCard = document.createElement('div')

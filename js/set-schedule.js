@@ -83,7 +83,6 @@ async function getDataDoctor(index) {
             var resultToken = '';
 
             for (var i = 0; i < length; i++) {
-                // Memilih karakter acak dari charset
                 var randomIndex = Math.floor(Math.random() * charset.length);
                 resultToken += charset.charAt(randomIndex);
             }
@@ -96,7 +95,7 @@ async function getDataDoctor(index) {
         radioButtons.forEach(function (radioButton) {
             radioButton.addEventListener('change', function (event) {
                 if (event.target.checked) {
-                    dataSelect = handleRadioButtonChange(radioButton); // Mengirim tombol yang diklik sebagai argumen
+                    dataSelect = handleRadioButtonChange(radioButton); 
                 }
             });
         });
@@ -112,14 +111,25 @@ async function getDataDoctor(index) {
             </label>
             <button type="submit">Konfirmasi</button>`
         confirm.innerHTML = payment
+
         formbox.addEventListener('submit', (event) => {
             event.preventDefault()
+
+            const selectedOption = document.querySelector('input[type="radio"][name="radio"]:checked');
+    
+            if (!selectedOption) {
+                
+                alert('Pilih opsi terlebih dahulu sebelum melanjutkan');
+                return; 
+            }
+
             const dataDay = doctor.schedule.find(schedule => schedule.day === dataSelect)
             let NewQueueData = {
                 queue_number: dataDay.queue.length + 1,
                 token: generateToken(6),
                 patient_name: parseakun[0].name
             }
+            
             if (dataDay) {
                 dataDay.queue.push(NewQueueData)
                 fetch(`https://6525187f67cfb1e59ce69680.mockapi.io/doctor/${index}`, {
@@ -138,8 +148,6 @@ async function getDataDoctor(index) {
                 }).catch((err) => {
                     console.error("Gagal push : ", err)
                 })
-
-
             }
         })
     }

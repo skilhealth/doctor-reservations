@@ -44,6 +44,10 @@ function cariDokter(doctors, name, day, hospital, specialist, metode) {
                 }
             })
         }
+        if (element.schedule.some(schedule => schedule.work === metode) && !day) {
+            doktorid.push(element.id)
+            count5 = 1;
+        }
     });
     found = count1 + count2 + count3 + count4 + count5
     return {

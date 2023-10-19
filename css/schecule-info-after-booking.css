@@ -117,9 +117,6 @@ figure>img {
 
 }
 
-
-/* desktop view */
-
 @media(min-width: 670px) {
     .main-wrap > h2{
         display: flex;

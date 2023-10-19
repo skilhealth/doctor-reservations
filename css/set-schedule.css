@@ -205,36 +205,6 @@ input:checked+ .details{
   font-weight: bold;
 }
 
-/* #modal{
-  background: var(--main-base);
-  border: solid 2px;
-  border-radius: 12px;
-  text-align: center;
-  left: 0;
-  top: 0;
-  width: auto;
-  align-items: center;
-  position: fixed;
-}
-
-.modal-content{
-  margin: 15% auto;
-  padding: 20px;
-  border: 1px solid #888;
-  width: 60%;
-  text-align: center;
-}
-
-close {
-  color: #aaa;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
-  cursor: pointer;
-} */
-
-
-/* desktop view */
 @media (min-width: 670px){
 
   article h3, article p, article li{

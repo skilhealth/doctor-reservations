@@ -103,8 +103,8 @@ async function getDataDoctor(index) {
         let payment = `
             <label class="confirm-detail">
                     <select id="payment-method">
-                        <option value="method" disabled selected>Pilih Metode Pembayaran</option>
-                        <option value="qris">QRIS</option>
+                        <option value="" name="method" disabled selected>Pilih Metode Pembayaran</option>
+                        <option value="qris" name="qris">QRIS</option>
                     </select>
                     <br><span id="price">RP.83.500</span>
                     <span>Include Tax*</span>
@@ -116,8 +116,9 @@ async function getDataDoctor(index) {
             event.preventDefault()
 
             const selectedOption = document.querySelector('input[type="radio"][name="radio"]:checked');
-    
-            if (!selectedOption) {
+            const selectedMethod = document.getElementById('payment-method')
+            
+            if (!selectedOption || !selectedMethod.value) {
                 
                 alert('Pilih opsi terlebih dahulu sebelum melanjutkan');
                 return; 

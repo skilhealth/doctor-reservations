@@ -18,11 +18,10 @@ function cariDokter(doctors, name, day, hospital, specialist, metode) {
     doctors.forEach((element) => {
         let fullName = element.name.toLowerCase()
         if (name) {
+            count1 = 1;
             if (fullName.includes(name)) {
                 doktorid.push(element.id)
-                count1 = 1;
             }
-
         }
         if (specialist === element.specialist) {
             doktorid.push(element.id)
@@ -47,14 +46,11 @@ function cariDokter(doctors, name, day, hospital, specialist, metode) {
         }
     });
     found = count1 + count2 + count3 + count4 + count5
-    if(found===0){
-        alert("Data Tidak Ditemukan")
-    }else{
-        return {
-            doktorid: doktorid,
-            get: found
-        }
+    return {
+        doktorid: doktorid,
+        get: found
     }
+
 }
 function findElementsWithCount(array, targetCount) {
     const frequencyCounter = array.reduce((acc, curr) => {
@@ -115,8 +111,12 @@ form.addEventListener('submit', (event) => {
     getData().then(result => {
         let data = cariDokter(result, cariValue.value, dayValue.value, hospitalValue.value, specialistValue.value, metodeValue.value)
         let hasil = findElementsWithCount(data.doktorid, data.get)
-        sessionStorage.setItem("listdokter", JSON.stringify(hasil))
-        cekLogin()
+        if (hasil.length === 0) {
+            alert("Data Tidak Ditemukan")
+        } else {
+            sessionStorage.setItem("listdokter", JSON.stringify(hasil))
+            cekLogin()
+        }
     })
         .catch(err => console.err("failed fetch : ", err))
 })

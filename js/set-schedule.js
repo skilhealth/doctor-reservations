@@ -89,7 +89,6 @@ async function getDataDoctor(index) {
             return resultToken;
         }
 
-        // Mengubah event listener Anda
         let dataSelect
         let radioButtons = document.querySelectorAll('input[type="radio"][name="radio"]');
         radioButtons.forEach(function (radioButton) {

@@ -1,8 +1,6 @@
 const getId = sessionStorage.getItem("listdokter")
 let myId = JSON.parse(getId)
-console.log(myId)
 let mainWrap = document.getElementById("wrapper")
-console.log(mainWrap)
 
 function getbadge(work) {
     if (work == "Regular") {

@@ -1,6 +1,5 @@
 const getToken = sessionStorage.getItem("MyToken")
 let myToken = JSON.parse(getToken)
-console.log(myToken)
 
 function getbadge(work) {
     if (work == "Regular") {

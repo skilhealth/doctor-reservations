@@ -27,7 +27,6 @@
     --danger:#740A0A;
 }
 
-/* ------------------ Nav Bar ------------------ */
 body{
     height: 100vh;
     display: flex;
@@ -156,8 +155,6 @@ body{
     .nav-content li a{
         font-size: 20px
     }
-
-    /* -------------------End Nav Bar----------------------- */
 
     .back-button{
         display: none;

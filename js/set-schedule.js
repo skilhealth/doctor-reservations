@@ -134,7 +134,7 @@ async function getDataDoctor(index) {
                     let arraykosong = JSON.parse(myToken) || []
                     arraykosong.push(NewQueueData.token)
                     sessionStorage.setItem("MyToken", JSON.stringify(arraykosong))
-                    window.location.href = "list-jadwal-temu.html"
+                    window.location.href = "pembayaran.html"
                 }).catch((err) => {
                     console.error("Gagal push : ", err)
                 })

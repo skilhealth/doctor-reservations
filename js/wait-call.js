@@ -19,7 +19,7 @@ async function getCalldata(index,day){
             <small>${doctor.specialist}</small>
             <div class="btn-wrap">
                 <small>Dokter sudah berada Dipanggilan</small>
-                <a href="https://wa.me/0881024656367"><Button>Masuk Panggilan</Button></a>
+                <a target="_blank" href="https://wa.me/0881024656367"><Button>Masuk Panggilan</Button></a>
             </div>
         `
         card[0].innerHTML = cardData

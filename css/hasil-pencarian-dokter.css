@@ -1,15 +1,10 @@
-@import url(style.css);
+@import "style.css";
 
-body{
-    height: 100vh;
-    display: flex;
-}
-
-main {
-    padding: 17px 20px;
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1;
+.back-button {
+    margin-top: 30px;
+    font-weight: 700px;
+    margin-left: 20px;
+    align-self: flex-start;
 }
 
 .card{
@@ -31,16 +26,7 @@ main {
     border-bottom: 5px solid var(--not-available);
     scale: 1.001;
     transition: 0.3s;
-}
-.main-wrap{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-.main-wrap>h3{
-    position: absolute;
-    top: 50%;
+    
 }
 
 .card>img {
@@ -75,17 +61,43 @@ h3{
     font-size: 16px;
 }
 
-.main-wrap > h2{
-    display: none;
-    
-
+.status-color {
+    height: 1em;
+    width: 1em;
+    border-radius: 20px;
+    margin-right: 4px;
 }
-
-@media(min-width: 670px) {
-    .main-wrap > h2{
+.judul{
+    display: none;
+}
+@media screen and (min-width: 670px) {
+    .judul{
         display: flex;
-        justify-content: center;
-        margin-bottom: 20px;
+    }
+    body {
+        display: flex;
+
     }
 
+    main {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+        margin: 55px -1px;
+    }
+
+    .dokter {
+        display: flex;
+        width: 50%;
+    }
+
+    .card {
+        display: flex;
+        width: 90%;
+    }
+
+    .profil-dctr {
+        align-items: center;
+    }
 }

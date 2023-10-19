@@ -46,7 +46,7 @@ async function getDoctorData() {
         myToken.forEach(function (token) {
             var doctorData = findDoctor(token, doctors);
             if (doctorData) {
-                let scheduleDate = doctorData.day + "," + doctorData.date
+                let scheduleDate = doctorData.day + ", " + doctorData.date
                 const profileCard = document.createElement('div')
                 profileCard.classList.add('card')
                     let carddata = `

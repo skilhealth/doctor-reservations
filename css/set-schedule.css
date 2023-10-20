@@ -169,6 +169,8 @@ input:checked+ .details{
 .confirm-detail{
   display: flex;
   flex-direction: column;
+  flex-grow: 1;
+  margin-right: 10px;
 }
 
 .confirm button{
@@ -187,7 +189,7 @@ input:checked+ .details{
 }
 
 .confirm-detail #price{
-  font-size: 18px;
+  font-size: 24px;
   font-weight: bold;
 }
 
@@ -196,8 +198,9 @@ input:checked+ .details{
 }
 
 #payment-method{
-  width: auto;
-  border-radius: 10px;
+  display: flex;
+  border-radius: 5px;
+  font-size: 14px;
 }
 
 .confirm button{
@@ -238,9 +241,11 @@ input:checked+ .details{
 #payment-method{
     font-size: 18px;
 }
-
+.confirm-detail{
+  margin-right: 0;
+}
 .confirm-detail #price{
-    font-size: 18px;
+  font-size: 32px;
 }
 
 .confirm-detail span{
@@ -248,7 +253,7 @@ input:checked+ .details{
 }
 
 .confirm button{
-    padding: 3px 3px;
+    padding: 10px 10px;
     height: auto;
   }
 

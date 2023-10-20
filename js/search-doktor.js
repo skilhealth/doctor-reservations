@@ -5,6 +5,7 @@ const hospitalValue = document.getElementById("hospital")
 const specialistValue = document.getElementById("specialist")
 const metodeValue = document.getElementById("metode")
 const form = document.getElementById("form")
+const alert = document.getElementById("alert")
 
 function cariDokter(doctors, name, day, hospital, specialist, metode) {
     name = name || null
@@ -116,7 +117,7 @@ form.addEventListener('submit', (event) => {
         let data = cariDokter(result, cariValue.value, dayValue.value, hospitalValue.value, specialistValue.value, metodeValue.value)
         let hasil = findElementsWithCount(data.doktorid, data.get)
         if (hasil.length === 0) {
-            alert("Data Tidak Ditemukan")
+            alert.innerHTML = "Data Tidak Ditemukan"
         } else {
             sessionStorage.setItem("listdokter", JSON.stringify(hasil))
             cekLogin()

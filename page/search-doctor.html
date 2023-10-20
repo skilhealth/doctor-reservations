@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,12 +12,13 @@
     <script src="../js/search-doktor.js" defer></script>
     <title>Search - Skilhealth</title>
 </head>
+
 <body>
     <nav class="header">
-        <label class="expand">
+        <a href="../index.html" class="expand">
             <img src="../assets/LogoSkillHealth.png" class="logo">
             <h1>Skilhealth</h1>
-        </label>
+        </a>
         <section class="nav">
             <input type="checkbox" id="check">
             <label for="check" class="check-btn">
@@ -39,6 +41,9 @@
                     <h2>Pencarian Dokter</h2>
                     <div class="input-wrap">
                         <input type="text" placeholder="Cari Dokter" id="cari">
+                    </div>
+                    <div style="text-align: center; margin:5px;">
+                        <h5 style="font-size: 16px;opacity:0.7;">Pencarian Lanjutan</h5>
                     </div>
                     <div class="input-wrap">
                         <label for="day">Hari</label>
@@ -74,6 +79,7 @@
                             <option value="Homecare">Homecare</option>
                         </select>
                     </div>
+                    <span id="alert" style="text-align: center;color:red;"></span>
                     <div class="btn-container">
                         <button type="submit" id="submit">Cari</button>
                     </div>
@@ -81,6 +87,7 @@
             </section>
         </div>
     </main>
-    
+
 </body>
+
 </html>

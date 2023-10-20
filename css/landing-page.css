@@ -190,7 +190,7 @@ main h1{
   margin: 10px;
   display: flex;
   flex-direction: column;
-  justify-content: center; /* Memusatkan secara horizontal */
+  justify-content: center;
   align-items: center; 
 }
 
@@ -350,7 +350,20 @@ footer{
     margin-left: 11px;
   }
 
+  .about h1{
+    font-size: 20px;
+  }
+
   .about p{
     margin-left: 15px;
+    font-size: 20px;
+  }
+
+  .method h1{
+    font-size: 20px;
+  }
+
+  .method p{
+    font-size: 20px;
   }
 }

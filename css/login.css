@@ -70,6 +70,9 @@ main{
     transition: 0.3s;
     opacity: 0.6;
 }
+.remember-link {
+    text-align: end;
+}
 
 @media screen and (min-width: 670px) {
     .back-button {

@@ -39,7 +39,7 @@ async function getDoctorData() {
         let result = await fetch("https://6525187f67cfb1e59ce69680.mockapi.io/doctor")
         let doctors = await result.json()
         if(!myToken){
-            return warp.innerHTML = "<h3>Data Tidak ada</h3>"
+            return warp.innerHTML = "<h3 style='opacity:0.6;'>Kamu belum membuat jadwal temu</h3>"
         }
         myToken.forEach(function (token) {
             var doctorData = findDoctor(token, doctors);

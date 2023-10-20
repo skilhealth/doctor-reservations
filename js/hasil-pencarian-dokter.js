@@ -2,16 +2,6 @@ const getId = sessionStorage.getItem("listdokter")
 let myId = JSON.parse(getId)
 let mainWrap = document.getElementById("wrapper")
 
-function getbadge(work) {
-    if (work == "Regular") {
-        return `<div class="badge" style="background-color: #0FF033;color: #FFFFFF;">Regular</div>`
-    } else if (work == "Daring") {
-        return `<div class="badge" style="background-color: #ECF00F;color: #000000;">Daring</div>`
-    } else {
-        return `<div class="badge" style="background-color: #740A0A;color: #FFFFFF;">${work}</div>`
-    }
-}
-
 async function getDoctorData() {
     try {
         let result = await fetch("https://6525187f67cfb1e59ce69680.mockapi.io/doctor")

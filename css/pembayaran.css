@@ -24,6 +24,9 @@ body {
     width: 50%;
     height: auto;
 }
+.back-button{
+    margin: 20px;
+}
 
 .payment-details{
     display: flex;

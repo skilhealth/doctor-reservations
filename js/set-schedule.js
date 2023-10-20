@@ -105,7 +105,7 @@ async function getDataDoctor(index) {
                         <option value="" name="method" disabled selected>Pilih Metode Pembayaran</option>
                         <option value="qris" name="qris">QRIS</option>
                     </select>
-                    <br><span id="price">RP.83.500</span>
+                    <span id="price">RP.83.500</span>
                     <span>Include Tax*</span>
             </label>
             <button type="submit">Konfirmasi</button>`

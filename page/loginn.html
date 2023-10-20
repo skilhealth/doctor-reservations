@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Skilhealth</title>
+    <link rel="stylesheet" href="../css/loginn.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="shortcut icon" href="../assets/LogoSkillHealth.png">
+    <script src="../js/loginn.js"></script>
+    <script src="https://kit.fontawesome.com/c5b31b49c9.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <main>
+        <section class="main">
+            <div class="back-button">
+                <a href="../index.html"><i class="fa-solid fa-arrow-left"></i></a>
+            </div>
+
+            <div class="logo-title">
+                <p>Selamat Datang di</p>
+                <p>Skillhealth!</p>
+                <img src="../assets/LogoSkillHealth.png" alt="">
+            </div>
+
+            <div class="form-container">
+                <form id="form-login" autocomplete="off">
+                    <h3> Username /Email</h3>
+                    <input id="email" type="text" placeholder="Masukan Username/Email" autofocus required>
+                    <h3> Password</h3>
+                    <input id="password" type="password" placeholder="Masukan Password" required>
+                    <button class="main-button" onclick="Login()" type="button" id="login-form">Login</button>
+                    <a href="../page/register.html" class="remember-link">Belum Punya Akun?</a>
+                </form>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>
